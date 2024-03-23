@@ -1,0 +1,23 @@
+meta {
+  name: update pin
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/pins/:id
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "vendorId": "12",
+  "vendorName": "Chur Bae",
+  "content": "Store info",  
+  "lat": "-36.849540650133406",
+  "lng": "174.7583113652903"
+  }
+  
+  
+}

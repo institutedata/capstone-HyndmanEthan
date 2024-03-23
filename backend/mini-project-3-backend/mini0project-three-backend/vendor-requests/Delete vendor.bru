@@ -1,0 +1,17 @@
+meta {
+  name: Delete vendor
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:8080/vendors/65e67b6c9853d28e17b21081
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": ""
+  }
+}

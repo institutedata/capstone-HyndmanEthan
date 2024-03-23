@@ -1,0 +1,23 @@
+meta {
+  name: Create pin
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/pins/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "vendorName": "Chur Bae",
+  "emailId": "email@email", 
+  "logo": "logo",
+  "content": "Store info",  
+  "lat": "-36.84929860386961",
+  "lng": "174.75828893877747"
+  }
+  
+}

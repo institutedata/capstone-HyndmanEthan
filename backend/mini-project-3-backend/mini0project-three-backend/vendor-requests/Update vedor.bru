@@ -1,0 +1,22 @@
+meta {
+  name: Update vedor
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/vendors/65e40803eb59a22f12111e75
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "cafe": "firstName",
+  "logo": "lastName",
+  "address": "userName",  
+  "emailId": "emailId@mail.com",
+  "password": "password"
+  }
+  
+}

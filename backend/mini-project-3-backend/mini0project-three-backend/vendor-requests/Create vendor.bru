@@ -1,0 +1,22 @@
+meta {
+  name: Create vendor
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/vendors/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "cafe": "Chur Bae",
+  "logo": "logo",
+  "address": "Shed 13A/90 Wellesley Street West, Auckland CBD, Auckland 1010",  
+  "emailId": "emailId@mail.com",
+  "password": "password"
+  }
+  
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Delete pin
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:8080/pins/:id
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": ""
+  }
+}

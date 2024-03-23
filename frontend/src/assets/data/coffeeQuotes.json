@@ -1,0 +1,806 @@
+[
+    {
+      "quoteId": 1,
+      "quote": "Coffee is the best thing to douse the sunrise with."
+    },
+    {
+      "quoteId": 2,
+      "quote": "Coffee: because adulting is hard."
+    },
+    {
+      "quoteId": 3,
+      "quote": "Coffee, the favorite drink of the civilized world."
+    },
+    {
+      "quoteId": 4,
+      "quote": "Life happens, coffee helps."
+    },
+    {
+      "quoteId": 5,
+      "quote": "I never drink coffee at lunch. I find it keeps me awake for the afternoon."
+    },
+    {
+      "quoteId": 6,
+      "quote": "Behind every successful person is a substantial amount of coffee."
+    },
+    {
+      "quoteId": 7,
+      "quote": "Coffee is the answer, no matter what the question is."
+    },
+    {
+      "quoteId": 8,
+      "quote": "Coffee smells like magic and fairy tales."
+    },
+    {
+      "quoteId": 9,
+      "quote": "A morning without coffee is like sleep."
+    },
+    {
+      "quoteId": 10,
+      "quote": "First I drink the coffee, then I do the things."
+    },
+    {
+      "quoteId": 11,
+      "quote": "Life without coffee is like a broken pencil, pointless."
+    },
+    {
+      "quoteId": 12,
+      "quote": "Coffee is the gasoline of life."
+    },
+    {
+      "quoteId": 13,
+      "quote": "Coffee: because Monday happens every week."
+    },
+    {
+      "quoteId": 14,
+      "quote": "Caffeine and kindness are the perfect blend."
+    },
+    {
+      "quoteId": 15,
+      "quote": "Coffee, the ultimate stress reliever."
+    },
+    {
+      "quoteId": 16,
+      "quote": "Coffee is my love language."
+    },
+    {
+      "quoteId": 17,
+      "quote": "Coffee makes everything better."
+    },
+    {
+      "quoteId": 18,
+      "quote": "Coffee is the key to survival."
+    },
+    {
+      "quoteId": 19,
+      "quote": "Coffee: because it's too early for wine."
+    },
+    {
+      "quoteId": 20,
+      "quote": "Coffee, because adulting is overrated."
+    },
+    {
+      "quoteId": 21,
+      "quote": "Coffee: a hug in a mug."
+    },
+    {
+      "quoteId": 22,
+      "quote": "Coffee is my personal sunshine."
+    },
+    {
+      "quoteId": 23,
+      "quote": "Coffee is the best companion for a cozy day."
+    },
+    {
+      "quoteId": 24,
+      "quote": "Coffee is the secret to instant human."
+    },
+    {
+      "quoteId": 25,
+      "quote": "Coffee: a liquid hug for your brain."
+    },
+    {
+      "quoteId": 26,
+      "quote": "Coffee is my spirit animal."
+    },
+    {
+      "quoteId": 27,
+      "quote": "Coffee is the reason I wake up with a smile."
+    },
+    {
+      "quoteId": 28,
+      "quote": "Coffee, because it's too early for chocolate."
+    },
+    {
+      "quoteId": 29,
+      "quote": "Coffee is thefuel that powers my productivity."
+    },
+    {
+      "quoteId": 30,
+      "quote": "A good day starts with a cup of coffee."
+    },
+    {
+      "quoteId": 31,
+      "quote": "Coffee: the elixir of life."
+    },
+    {
+      "quoteId": 32,
+      "quote": "Coffee is my therapy."
+    },
+    {
+      "quoteId": 33,
+      "quote": "Inhale coffee, exhale negativity."
+    },
+    {
+      "quoteId": 34,
+      "quote": "Coffee is the reason I'm a morning person."
+    },
+    {
+      "quoteId": 35,
+      "quote": "Coffee, because adulting requires caffeine."
+    },
+    {
+      "quoteId": 36,
+      "quote": "Life is too short for bad coffee."
+    },
+    {
+      "quoteId": 37,
+      "quote": "Coffee: the fuel for champions."
+    },
+    {
+      "quoteId": 38,
+      "quote": "Coffee is like a hug from the inside."
+    },
+    {
+      "quoteId": 39,
+      "quote": "Coffee: because mornings are hard."
+    },
+    {
+      "quoteId": 40,
+      "quote": "Coffee is the start of endless possibilities."
+    },
+    {
+      "quoteId": 41,
+      "quote": "Coffee: the nectar of the gods."
+    },
+    {
+      "quoteId": 42,
+      "quote": "Coffee and friends make the perfect blend."
+    },
+    {
+      "quoteId": 43,
+      "quote": "Coffee is the heartbeat of mornings."
+    },
+    {
+      "quoteId": 44,
+      "quote": "Coffee, the source code of success."
+    },
+    {
+      "quoteId": 45,
+      "quote": "Coffee is a hug in a mug."
+    },
+    {
+      "quoteId": 46,
+      "quote": "Coffee: the language of love."
+    },
+    {
+      "quoteId": 47,
+      "quote": "Coffee is my daily companion."
+    },
+    {
+      "quoteId": 48,
+      "quote": "Coffee, because it's a brew-tiful day."
+    },
+    {
+      "quoteId": 49,
+      "quote": "Coffee is the rhythm of my day."
+    },
+    {
+      "quoteId": 50,
+      "quote": "Coffee: the secret to my superpowers."
+    },
+    {
+      "quoteId": 51,
+      "quote": "Coffee, the potion for productivity."
+    },
+    {
+      "quoteId": 52,
+      "quote": "Coffee: the ultimate source of inspiration."
+    },
+    {
+      "quoteId": 53,
+      "quote": "Coffee is the bridge between dreams and reality."
+    },
+    {
+      "quoteId": 54,
+      "quote": "Coffee, the art of starting the day."
+    },
+    {
+      "quoteId": 55,
+      "quote": "Coffee: the cure for the Mondays."
+    },
+    {
+      "quoteId": 56,
+      "quote": "Coffee is the soundtrack to my mornings."
+    },
+    {
+      "quoteId": 57,
+      "quote": "Coffee: the best way to caffeinate the soul."
+    },
+    {
+      "quoteId": 58,
+      "quote": "Coffee fuels my passion."
+    },
+    {
+      "quoteId": 59,
+      "quote": "Coffee, because it's a brewing miracle."
+    },
+    {
+      "quoteId": 60,
+      "quote": "Coffee is the perfect companion for contemplation."
+    },
+    {
+      "quoteId": 61,
+      "quote": "Coffee: the gentle alarm clock for the mind."
+    },
+    {
+      "quoteId": 62,
+      "quote": "Coffee is my morning muse."
+    },
+    {
+      "quoteId": 63,
+      "quote": "Coffee: the potion that brings ideas to life."
+    },
+    {
+      "quoteId": 64,
+      "quote": "Coffee is the catalyst for creativity."
+    },
+    {
+      "quoteId": 65,
+      "quote": "Coffee: the passport to productivity."
+    },
+    {
+      "quoteId": 66,
+      "quote": "Coffee is the whisper of motivation."
+    },
+    {
+      "quoteId": 67,
+      "quote": "Coffee: the aroma of inspiration."
+    },
+    {
+      "quoteId": 68,
+      "quote": "Coffee fuels my dreams."
+    },
+    {
+      "quoteId": 69,
+      "quote": "Coffee: the potion for progress."
+    },
+    {
+      "quoteId": 70,
+      "quote": "Coffee is my trusted companion during late nights."
+    },
+    {
+      "quoteId": 71,
+      "quote": "Coffee: the secret ingredient for success."
+    },
+    {
+      "quoteId": 72,
+      "quote": "Coffee is the muse behind my masterpieces."
+    },
+    {
+      "quoteId": 73,
+      "quote": "Coffee: the elixir that ignites passions."
+    },
+    {
+      "quoteId": 74,
+      "quote": "Coffee awakens the dormant creativity within."
+    },
+    {
+      "quoteId": 75,
+      "quote": "Coffee: the fuel that powers my imagination."
+    },
+    {
+      "quoteId": 76,
+      "quote": "Coffee is the catalyst for breakthroughs."
+    },
+    {
+      "quoteId": 77,
+      "quote": "Coffee: the enchanting potion of productivity."
+    },
+    {
+      "quoteId": 78,
+      "quote": "Coffee ignites the fire of innovation."
+    },
+    {
+      "quoteId": 79,
+      "quote": "Coffee: the companion for endless possibilities."
+    },
+    {
+      "quoteId": 80,
+      "quote": "Coffee is the key that unlocks my potential."
+    },
+    {
+      "quoteId": 81,
+      "quote": "Coffee: the elixir of endless inspiration."
+    },
+    {
+      "quoteId": 82,
+      "quote": "Coffee fuels my determination."
+    },
+    {
+      "quoteId": 83,
+      "quote": "Coffee: the muse that dances in my cup."
+    },
+    {
+      "quoteId": 84,
+      "quote": "Coffee is the heartbeat of creativity."
+    },
+    {
+      "quoteId": 85,
+      "quote": "Coffee: the potion that brings ideas to fruition."
+    },
+    {
+      "quoteId": 86,
+      "quote": "Coffee fuels the fire of innovation within."
+    },
+    {
+      "quoteId": 87,
+      "quote": "Coffee: the catalyst for intellectual endeavors."
+    },
+    {
+      "quoteId": 88,
+      "quote": "Coffee is the rhythm that keeps me in flow."
+    },
+    {
+      "quoteId": 89,
+      "quote": "Coffee: the elixir that awakens my genius."
+    },
+    {
+      "quoteId": 90,
+      "quote": "Coffee is the secret ingredient in my recipe for success."
+    },
+    {
+      "quoteId": 91,
+      "quote": "Coffee: the potion that brings dreams to life."
+    },
+    {
+      "quoteId": 92,
+      "quote": "Coffee fuels my ambitions."
+    },
+    {
+      "quoteId": 93,
+      "quote": "Coffee: the elixir that powers my aspirations."
+    },
+    {
+      "quoteId": 94,
+      "quote": "Coffee awakens the entrepreneur within."
+    },
+    {
+      "quoteId": 95,
+      "quote": "Coffee: the energy source for my goals."
+    },
+    {
+      "quoteId": 96,
+      "quote": "Coffee is the catalyst for my pursuit of excellence."
+    },
+    {
+      "quoteId": 97,
+      "quote": "Coffee: the companion on my journey to greatness."
+    },
+    {
+      "quoteId": 98,
+      "quote": "Coffee fuels my determination to succeed."
+    },
+    {
+      "quoteId": 99,
+      "quote": "Coffee: the source of my entrepreneurial spirit."
+    },
+    {
+      "quoteId": 100,
+      "quote": "Coffee is the driving force behind my dreams."
+    },
+    {
+      "quoteId": 101,
+      "quote": "Coffee: the legal productivity booster."
+    },
+    {
+      "quoteId": 102,
+      "quote": "Coffee, because 'procaffeinating' is a skill."
+    },
+    {
+      "quoteId": 103,
+      "quote": "Coffee: the fuel that transforms dreams into deadlines."
+    },
+    {
+      "quoteId": 104,
+      "quote": "Coffee is my power-up potion for productivity."
+    },
+    {
+      "quoteId": 105,
+      "quote": "Coffee: the shortcut to a productive state of mind."
+    },
+    {
+      "quoteId": 106,
+      "quote": "Coffee, the secret weapon of highly effective people."
+    },
+    {
+      "quoteId": 107,
+      "quote": "Coffee: the magical elixir that turns 'I can't' into 'I can.'"
+    },
+    {
+      "quoteId": 108,
+      "quote": "Coffee is my productivity ninja."
+    },
+    {
+      "quoteId": 109,
+      "quote": "Coffee: the secret ingredient in the recipe of success."
+    },
+    {
+      "quoteId": 110,
+      "quote": "Coffee fuels my multitasking superpowers."
+    },
+    {
+      "quoteId": 111,
+      "quote": "Coffee: the rocket fuel for productivity liftoff."
+    },
+    {
+      "quoteId": 112,
+      "quote": "Coffee, because 'do not disturb' mode needs an on switch."
+    },
+    {
+      "quoteId": 113,
+      "quote": "Coffee: the ultimate weapon against procrastination."
+    },
+    {
+      "quoteId": 114,
+      "quote": "Coffee is the magical spell that turns deadlines into accomplishments."
+    },
+    {
+      "quoteId": 115,
+      "quote": "Coffee: the silent productivity partner."
+    },
+    {
+      "quoteId": 116,
+      "quote": "Coffee fuels my ambition to conquer the to-do list."
+    },
+    {
+      "quoteId": 117,
+      "quote": "Coffee: the brain juice for productive geniuses."
+    },
+    {
+      "quoteId": 118,
+      "quote": "Coffee, the superhero cape for productivity warriors."
+    },
+    {
+      "quoteId": 119,
+      "quote": "Coffee: the ultimate productivity hack since forever."
+    },
+    {
+      "quoteId": 120,
+      "quote": "Coffee is my brainstorming buddy."
+    },
+    {
+      "quoteId": 121,
+      "quote": "Coffee: the magical potion that turns tasks into triumphs."
+    },
+    {
+      "quoteId": 122,
+      "quote": "Coffee fuels my quest to conquer the world, one task at a time."
+    },
+    {
+      "quoteId": 123,
+      "quote": "Coffee: the master key that unlocks my productivity kingdom."
+    },
+    {
+      "quoteId": 124,
+      "quote": "Coffee is my secret weapon against the evil forces of procrastination."
+    },
+    {
+      "quoteId": 125,
+      "quote": "Coffee: the alchemist that transforms laziness into productivity gold."
+    },
+    {
+      "quoteId": 126,
+      "quote": "Coffee fuels my unstoppable productivity train."
+    },
+    {
+      "quoteId": 127,
+      "quote": "Coffee: the energy source for world domination... or a really productive day, whichever comes first."
+    },
+    {
+      "quoteId": 128,
+      "quote": "Coffee is my productivity potion, and I'm the wizard."
+    },
+    {
+      "quoteId": 129,
+      "quote": "Coffee: the secret ingredient that upgrades my efficiency."
+    },
+    {
+      "quoteId": 130,
+      "quote": "Coffee fuels my 'get things done' mode."
+    },
+    {
+      "quoteId": 131,
+      "quote": "Coffee: the magic elixir that turns tasks into accomplishments."
+    },
+    {
+      "quoteId": 132,
+      "quote": "Coffee is my morning superhero, saving the day one task at a time."
+    },
+    {
+      "quoteId": 133,
+      "quote": "Coffee: the guardian angel of deadlines."
+    },
+    {
+      "quoteId": 134,
+      "quote": "Coffee fuels my productivity engine; without it, I'd be running on empty."
+    },
+    {
+      "quoteId": 135,
+      "quote": "Coffee: the secret weapon in my battle against procrastination."
+    },
+    {
+      "quoteId": 136,
+      "quote": "Coffee is my daily dose of motivation, with a side of caffeine."
+    },
+    {
+      "quoteId": 137,
+      "quote": "Coffee: the life support system for my productive alter ego."
+    },
+    {
+      "quoteId": 138,
+      "quote": "Coffee fuels my supercharged productivity mode."
+    },
+    {
+      "quoteId": 139,
+      "quote": "Coffee: the MVP (Most Valuable Productivity) of my day."
+    },
+    {
+      "quoteId": 140,
+      "quote": "Coffee is my secret weapon for getting things done while pretending to look busy."
+    },
+    {
+      "quoteId": 141,
+      "quote": "Coffee: the performance-enhancing drink of champions."
+    },
+    {
+      "quoteId": 142,
+      "quote": "Coffee fuels my laser-focused productivity beams."
+    },
+    {
+      "quoteId": 143,
+      "quote": "Coffee: the high-octane fuel for my productivity race."
+    },
+    {
+      "quoteId": 144,
+      "quote": "Coffee is my partner in crime for slaying the productivity dragons."
+    },
+    {
+      "quoteId": 145,
+      "quote": "Coffee: the secret ingredient in my recipe for conquering the world."
+    },
+    {
+      "quoteId": 146,
+      "quote": "Coffee fuels my productive adventures in the land of deadlines."
+    },
+    {
+      "quoteId": 147,
+      "quote": "Coffee: the compass that guides me through the productivity jungle."
+    },
+    {
+      "quoteId": 148,
+      "quote": "Coffee is my productivity genie; one sip, and wishes come true."
+    },
+    {
+      "quoteId": 149,
+      "quote": "Coffee: the ultimate sidekick in my fight against procrastination villains."
+    },
+    {
+      "quoteId": 150,
+      "quote": "Coffee fuels my efficiency rocket to productivity galaxy."
+    },
+    {
+      "quoteId": 151,
+      "quote": "I should have prepared for this coffee."
+    },
+    {
+      "quoteId": 152,
+      "quote": "Coffee keeps me up all night, but I ain't complainin'."
+    },
+    {
+      "quoteId": 153,
+      "quote": "Baby, let's have a coffee date, just me and you. We'll brew up some love."
+    },
+    {
+      "quoteId": 154,
+      "quote": "Coffee is like our little secret. It's the one thing that keeps me going, just like you."
+    },
+    {
+      "quoteId": 155,
+      "quote": "You're my caffeine rush, my energy boost. You're my cup of coffee in the morning haze."
+    },
+    {
+      "quoteId": 156,
+      "quote": "Coffee and you, it's the perfect blend. We're like a match made in caffeine heaven."
+    },
+    {
+      "quoteId": 157,
+      "quote": "I'm addicted to you like I'm addicted to my morning coffee. You're my sweet caffeine fix."
+    },
+    {
+      "quoteId": 158,
+      "quote": "Just like a cup of joe, you wake me up, give me that buzz. You're my coffee love."
+    },
+    {
+      "quoteId": 159,
+      "quote": "With every sip of coffee, I fall a little more in love with you. You're my perfect blend."
+    },
+    {
+      "quoteId": 160,
+      "quote": "Coffee in hand, love in my heart. You make every morning a work of art."
+    },
+    {
+      "quoteId": 161,
+      "quote": "You're my wake-up call, my coffee crush. Can't start my day without you, love."
+    },
+    {
+      "quoteId": 162,
+      "quote": "Coffee is like a beautiful melody that keeps playing in my head. You're the harmony to my caffeine."
+    },
+    {
+      "quoteId": 163,
+      "quote": "Just like the perfect chord progression, coffee and you make everything better."
+    },
+    {
+      "quoteId": 164,
+      "quote": "I'm feeling high on life and coffee. You're the caffeine that keeps me going."
+    },
+    {
+      "quoteId": 165,
+      "quote": "Coffee and love, two things that make my heart race. You're my double shot of happiness."
+    },
+    {
+      "quoteId": 166,
+      "quote": "You're my favorite blend, the coffee to my cream. Together, we make the perfect team."
+    },
+    {
+      "quoteId": 167,
+      "quote": "Sip by sip, you intoxicate my soul. You're my addictive coffee love."
+    },
+    {
+      "quoteId": 168,
+      "quote": "Like a warm cup of coffee, your love fills me up and warms my heart."
+    },
+    {
+      "quoteId": 169,
+      "quote": "You're the caffeine rush that gives me butterflies. My heart races with every sip."
+    },
+    {
+      "quoteId": 170,
+      "quote": "Coffee runs through my veins, just like your love. It keeps me alive and energized."
+    },
+    {
+      "quoteId": 171,
+      "quote": "You're the aroma that fills my mornings, the coffee that kickstarts my day."
+    },
+    {
+      "quoteId": 172,
+      "quote": "Coffee with a side of you, it's the best way to start my day. You're my perfect morning blend."
+    },
+    {
+      "quoteId": 173,
+      "quote": "Just like the steam rising from my coffee, my love for you is hot and irresistible."
+    },
+    {
+      "quoteId": 174,
+      "quote": "With each sip of coffee, I'm reminded of how sweet life is with you by my side."
+    },
+    {
+      "quoteId": 175,
+      "quote": "You're the caffeine to my dreams, the fuel to my ambitions. Together, we can conquer the world."
+    },
+    {
+      "quoteId": 176,
+      "quote": "Coffee and you, it's the perfect harmony. You're my favorite melody in the morning symphony."
+    },
+    {
+      "quoteId": 177,
+      "quote": "Just like the aroma of freshly brewed coffee, your love fills the air and captivates my senses."
+    },
+    {
+      "quoteId": 178,
+      "quote": "You're my morning sunshine, my cup of coffee. With you, every day starts with warmth and happiness."
+    },
+    {
+      "quoteId": 179,
+      "quote": "Coffee is my lifeline, and you're the heartbeat that keeps me going."
+    },
+    {
+      "quoteId": 180,
+      "quote": "Like a perfect melody, our love and coffee go hand in hand. They bring rhythm and joy to my life."
+    },
+    {
+      "quoteId": 181,
+      "quote": "Just like the first sip of coffee, your love touches my lips and sends shivers down my spine."
+    },
+    {
+      "quoteId": 182,
+      "quote": "Coffee is my morning anthem, and you're the lyrics that make it beautiful."
+    },
+    {
+      "quoteId": 183,
+      "quote": "You're my favorite coffee shop, where love is brewed and memories are made."
+    },
+    {
+      "quoteId": 184,
+      "quote": "Just like the perfect harmony, coffee and you make my heart sing."
+    },
+    {
+      "quoteId": 185,
+      "quote": "You're the coffee bean that brings flavor to my life. Together, we create a masterpiece."
+    },
+    {
+      "quoteId": 186,
+      "quote": "Coffee runs through my veins, and your love runs through my soul. I'm fully caffeinated with you."
+    },
+    {
+      "quoteId": 187,
+      "quote": "Like a freshly brewed cup of coffee, your love awakens my senses and fills me with warmth."
+    },
+    {
+      "quoteId": 188,
+      "quote": "You're the sugar to my coffee, adding sweetness to every moment we share."
+    },
+    {
+      "quoteId": 189,
+      "quote": "Just like the perfect latte art, your love paints beauty into my life."
+    },
+    {
+      "quoteId": 190,
+      "quote": "Coffee is my addiction, but you're my sweetest craving. I can't get enough of you."
+    },
+    {
+      "quoteId": 191,
+      "quote": "With every sip of coffee, I'm reminded of the warmth and comfort you bring to my life."
+    },
+    {
+      "quoteId": 192,
+      "quote": "You're my coffee soulmate, the one who understands my need for caffeine and love."
+    },
+    {
+      "quoteId": 193,
+      "quote": "Just like the perfect espresso shot, your love gives me the energy to take on the world."
+    },
+    {
+      "quoteId": 194,
+      "quote": "Coffee is my morning ritual, and you're the reason I look forward to waking up each day."
+    },
+    {
+      "quoteId": 195,
+      "quote": "You're the foam on my cappuccino, adding a touch of sweetness to my life."
+    },
+    {
+      "quoteId": 196,
+      "quote": "Like a perfectly brewed coffee, your love is the right balance of warmth and strength."
+    },
+    {
+      "quoteId": 197,
+      "quote": "You're my caffeine addiction, the rush that keeps me going. I'm hooked on you."
+    },
+    {
+      "quoteId": 198,
+      "quote": "Just like a coffee break, your love rejuvenates me and gives me the strength to keep going."
+    },
+    {
+      "quoteId": 199,
+      "quote": "Coffee and you, the perfect combination that gives me a taste of heaven."
+    },
+    {
+      "quoteId": 200,
+      "quote": "You're the creamer to my coffee, making every moment sweeter and more delightful."
+    },
+    {
+      "quoteId": 201,
+      "quote": "Like a double shot of espresso, your love gives me the energy to chase my dreams."
+    }
+  ]

@@ -1,0 +1,979 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "PERCS API",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Users",
+      "description": "Operations related to users"
+    },
+    {
+      "name": "Pins",
+      "description": "Operations related to pins"
+    },
+    {
+      "name": "Vendors",
+      "description": "Operations related to vendors"
+    }
+
+  ],
+  "paths": {
+    "/users/": {
+      "get": {
+        "summary": "Gets all users",
+        "tags": ["Users"],
+        "responses": {
+          "200": {
+            "description": "A list of current users.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+       }
+      },
+      "/users/create":{
+
+        "post": {
+          "summary": "Create a new user",
+          "tags": ["Users"],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                },
+                "example": {
+                  "firstName": "Steve",
+                  "lastName": "Dave",
+                  "userName": "Stave",
+                  "emailId": "Stave@mail.com",
+                  "password": "password"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "User created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "result": {
+                        "type": "number",
+                        "example": 200
+                      },
+                      "data": {
+                        "$ref": "#/components/schemas/User"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "result": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "error": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+    
+    "/users/{id}": {
+      "put": {
+        "summary": "Update a user by ID",
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a user by ID",
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pins/pin": {
+      "get": {
+        "summary": "Gets all pins",
+        "tags": ["Pins"],
+        "responses": {
+          "200": {
+            "description": "A list of pins.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pin"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      },
+      "/pins/create":{
+      "post": {
+        "summary": "Create a new pin",
+        "tags": ["Pins"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pin"
+              },
+              "example": {
+                "vendorName": "Allpress",
+                "emailId": "Allpress@example.com",
+                "logo": "coffee_logo.png",
+                "content": "Coffee",
+                "lat": -36.8461131799196,
+                "lng": 174.75550806570064
+                 
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pin created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/Pin"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pins/{id}": {
+      "put": {
+        "summary": "Update a pin by ID",
+        "tags": ["Pins"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pin"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pin updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/Pin"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a pin by ID",
+        "tags": ["Pins"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Pin deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/Pin"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vendors/": {
+      "get": {
+        "summary": "Gets all vendors",
+        "tags": ["Vendors"],
+        "responses": {
+          "200": {
+            "description": "A list of vendors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vendor"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vendors/create": {
+      "post": {
+        "summary": "Create a new vendor",
+        "tags": ["Vendors"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vendor"
+              },
+              "example": {
+                "cafe": "Allpress",
+          "logo": "coffee_logo",
+          "address": "8 Drake Street, Freemans Bay, Auckland 1010",
+          "emailId": "Allpress@mail",
+          "password": "password"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Vendor created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/Vendor"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vendors/{id}": {
+      "put": {
+        "summary": "Update a vendor by ID",
+        "tags": ["Vendors"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vendor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Vendor updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/Vendor"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a vendor by ID",
+        "tags": ["Vendors"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Vendor deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/Vendor"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+      "/vendors/login": {
+        "post": {
+          "summary": "Login as a vendor",
+          "tags": ["Vendors"],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "emailId": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["emailId", "password"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful login",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "token": {
+                        "type": "string",
+                        "description": "JWT token for authentication"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "Successful login, welcome Allpress"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request - Wrong email or password",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "result": {
+                        "type": "number",
+                        "example": 400
+                      },
+                      "error": {
+                        "type": "string",
+                        "example": "Wrong email or password"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "result": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "error": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/users/login": {
+        "post": {
+          "summary": "Login as a user",
+          "tags": ["Users"],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "emailId": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["emailId", "password"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful login",
+              "content": {
+                
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "token": {
+                        "type": "string",
+                        "description": "JWT token for authentication"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "Successful login, welcome Steve"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            
+            "400": {
+              "description": "Bad request - Wrong username or password",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "result": {
+                        "type": "number",
+                        "example": 400
+                      },
+                      "error": {
+                        "type": "string",
+                        "example": "Wrong username or password"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "result": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "error": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  },
+  
+
+
+
+
+  
+  "components": {
+    "schemas": {
+      "Pin": {
+        "type": "object",
+        "properties": {
+          "vendorName": {
+            "type": "string"
+          },
+          "emailId": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "vendorName",
+          "emailId",
+          "logo",
+          "lat",
+          "lng"
+        ]
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "emailId": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "userName",
+          "emailId",
+          "password"
+        ]
+      },
+      "Vendor": {
+        "type": "object",
+        "properties": {
+          "cafe": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "emailId": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "cafe",
+          "logo",
+          "address",
+          "emailId",
+          "password"
+        ]
+      }
+    }
+  }
+}

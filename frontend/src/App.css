@@ -1,0 +1,28 @@
+/* 
+Colour Palette:
+Spicy Mix
+#7F5241
+
+Wheat
+#F4D9BA
+
+Di Serria
+#D8975B
+
+Tumbleweed
+#DEB389 
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+body {
+    background-color: #fbf7f5;
+  }
+
+  
