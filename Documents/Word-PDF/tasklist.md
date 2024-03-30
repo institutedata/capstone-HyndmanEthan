@@ -10,8 +10,8 @@
 - [x] 7. Data structure
 - [] 8. usage? (who will actually be end user what does this look like)
 - [] 9. Version control management (create branch for updates and keep current working build on main)
-- [] 10. Create branch 
-- [] 11. 
+- [] 10. Create README.md (provide context and guidelines for working on the project)
+- [] 11. Record what libraries and frameworks used and why
 - [] 12. 
 
 ### Frontend objectives
@@ -41,6 +41,6 @@
 
 <!-- FE: Frontend issue, BE: Backend issue -->
 ## Known issues/Bugs
-- [] FE: Hardcoded css values (Improve responsiveness)
+- [] FE: Hardcoded css values (Improve responsiveness, sign in/up, topnavbar logo, vendor details)
 - [] FE: NavBar overlaying on pages (add to pages then stop rerender)
 - [] : 

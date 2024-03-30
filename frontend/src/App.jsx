@@ -3,10 +3,12 @@
 // npm i "@vis.gl/react-google-maps"
 // npm install @mui/material @emotion/react @emotion/styled
 // npm install @mui/icons-material
+// npm install react-hook-form
+// npm i yup
 // npm install react-router-dom
 // npm run dev
 
-"use client";
+
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import MapPage from "./pages/MapPage";

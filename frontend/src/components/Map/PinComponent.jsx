@@ -1,16 +1,17 @@
-
+// PinComponent.js
+import React from "react";
 import { AdvancedMarker, Pin } from "@vis.gl/react-google-maps";
 
-
-export default function PinComponent({ pins, markerRef, toggleInfoWindow}) {
-
-    {pins.map((pin) => (
+const PinComponent = ({ pins, markerRef, toggleInfoWindow }) => {
+  return (
+    <>
+      {pins.map((pin) => (
         <AdvancedMarker
-            key={pin.id}
+          key={pin.id}
           title={pin.vendorName}
-          ref={markerRef}
-          position={{ lat: pin.lat, lng: pin.lng }} // Use the pin data to set marker position
-          onClick={toggleInfoWindow}
+          position={{ lat: pin.lat, lng: pin.lng }}
+          onClick={() => toggleInfoWindow(pin)} // Pass the pin to toggleInfoWindow
+          ref={markerRef} // Assuming markerRef is used elsewhere
         >
           <Pin
             background={"#FBBC04"}
@@ -18,4 +19,9 @@ export default function PinComponent({ pins, markerRef, toggleInfoWindow}) {
             borderColor={"#000"}
           />
         </AdvancedMarker>
-      ))}}
+      ))}
+    </>
+  );
+};
+
+export default PinComponent;

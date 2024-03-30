@@ -18,7 +18,7 @@ const VendorStamps = ({ title, initialFavorite, initialSubscribed, circleColour 
   };
 
   return (
-    <Paper elevation={5} square={false} style={{marginBottom: 16, marginLeft:24, marginRight:24 }}>
+    <Paper elevation={5} square={false} style={{}}>
       <CardHeader
         title={title}
         action={

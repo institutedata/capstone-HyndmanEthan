@@ -17,7 +17,7 @@ const VendorCard = ({ title, initialFavorite, initialSubscribed }) => {
   };
   return (
     <>
-      <Card sx={{ height: 60 }}>
+      <Card style={{width: "100%", height: "100%" }}>
         <Box
           style={{
             display: "flex",

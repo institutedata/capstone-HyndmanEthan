@@ -57,6 +57,7 @@ const HomePage = () => {
 
         </Box>
         <Box>
+          
           <Divider style={{ margin: "20px 0" }} />
           <Typography
             variant="h6"
@@ -66,14 +67,32 @@ const HomePage = () => {
           >
             Subscribed
           </Typography>
-          
+          <Grid container xs={12}>  
+          <Grid xs={4}>
             <VendorStamps
               title="All Press Espresso"
               initialFavorite={false}
               initialSubscribed={true}
               circleColour={"primary"}
             />
-
+            </Grid>
+          <Grid xs={4}>
+            <VendorStamps
+              title="All Press Espresso"
+              initialFavorite={false}
+              initialSubscribed={true}
+              circleColour={"primary"}
+            />
+            </Grid>
+          <Grid xs={4}>
+            <VendorStamps
+              title="All Press Espresso"
+              initialFavorite={false}
+              initialSubscribed={true}
+              circleColour={"primary"}
+            />
+            </Grid>
+            </Grid>
         </Box>
       </Container>
     </ThemeProvider>

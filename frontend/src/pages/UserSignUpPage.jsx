@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -11,8 +10,20 @@ import { ThemeProvider } from "@mui/material/styles";
 import PercsSecondaryTheme from "../styles/PercsSecondaryTheme";
 import Perculator from "../assets/img/Perculator.svg";
 import Logo from "../assets/img/Logo.png";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+// Uses mui components to create a sign up form for new users
+// Uses react-hook-form and yup for form validation
+// Uses Yup for form validation schema
+// Uses PercsSecondaryTheme for styling
+// Uses Logo and Perculator for images
+// Uses Link from react-router-dom for navigation
 
 
+
+// Copyright from mui
 function Copyright(props) {
   return (
     <Typography
@@ -30,43 +41,25 @@ function Copyright(props) {
   );
 }
 
-function validateEmail(email) {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailRegex.test(String(email).toLowerCase());
-}
 
+// Sign up form
 export default function UserSignUp() {
-  const [errors, setErrors] = useState({});
+  // Form validation schema
+  const schema = yup.object().shape({
+    username: yup.string().required("Username is required"),
+    email: yup.string().email().required("Email is required"),
+    password: yup.string().required("Password is required"),
+    confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match')
+  })
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const username = formData.get("username");
-    const email = formData.get("email");
-    const password = formData.get("password");
-
-    const newErrors = {};
-
-    if (!username) {
-      newErrors.username = "Username is required";
+    // Form validation
+    const {register, handleSubmit, formState: {errors} } = useForm({
+      resolver: yupResolver(schema)
+    });
+    const onSubmit = (data) => {  
+      console.log(data);
+      console.log("data submitted");
     }
-    if (!email || !validateEmail(email)) {
-      newErrors.email = "Valid email is required";
-    }
-    if (!password) {
-      newErrors.password = "Password is required";
-    }
-
-    if (Object.keys(newErrors).length === 0) {
-      console.log("Form submitted successfully");
-      // TODO: Handle form submission, e.g., send data to backend
-      // Clear errors
-      setErrors({});
-    } else {
-      console.error("Form submission failed");
-      setErrors(newErrors);
-    }
-  };
 
   return (
     <ThemeProvider theme={PercsSecondaryTheme}>
@@ -94,16 +87,17 @@ export default function UserSignUp() {
           <Typography component="h1" variant="h4">
             Create User
           </Typography>
+          {/* Form for create new user */}
           <Box
             component="form"
             noValidate
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             sx={{ mt: 3 }}
           >
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
-                  autoComplete="username"
+                  
                   name="username"
                   required
                   fullWidth
@@ -111,8 +105,8 @@ export default function UserSignUp() {
                   label="Username"
                   variant="standard"
                   autoFocus
-                  error={!!errors.username}
-                  helperText={errors.username}
+                  {...register('username')}
+                  helperText={errors.username?.message}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -123,9 +117,8 @@ export default function UserSignUp() {
                   label="Email Address"
                   name="email"
                   variant="standard"
-                  autoComplete="email"
-                  error={!!errors.email}
-                  helperText={errors.email}
+                  helperText={errors.email?.message}
+                  {...register('email')}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -137,9 +130,21 @@ export default function UserSignUp() {
                   type="password"
                   id="password"
                   variant="standard"
-                  autoComplete="new-password"
-                  error={!!errors.password}
-                  helperText={errors.password}
+                  helperText={errors.password?.message}
+                  {...register('password')}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="confirmPassword"
+                  label="Confirm Password"
+                  type="password"
+                  id="confirmPassword"
+                  variant="standard"
+                  helperText={errors.confirmPassword?.message}
+                  {...register('confirmPassword')}
                 />
               </Grid>
             </Grid>

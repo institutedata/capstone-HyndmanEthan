@@ -4,3 +4,4 @@ module.exports = {
  Pin: require('./pin'),
  Vendor: require('./vendor')
 };
+// TODO: Add the rest of the models here

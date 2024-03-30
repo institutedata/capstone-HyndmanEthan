@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -13,9 +12,9 @@ import { ThemeProvider } from '@mui/material/styles';
 import PercsSecondaryTheme from '../styles/PercsSecondaryTheme'; // Importing custom MUI theme
 import Perculator from '../assets/img/Perculator.svg'; // Importing SVG image
 import Logo from '../assets/img/Logo.png'; // Importing image file
-import { useNavigate } from "react-router-dom";
-
-
+import { useForm } from 'react-hook-form';
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 
 // Component for displaying copyright information
@@ -31,59 +30,23 @@ function Copyright(props) {
   );
 }
 
-// Function to validate email format
-function validateEmail(email) {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailRegex.test(String(email).toLowerCase());
-}
+
 
 // Functional component for User Sign-In page
 export default function UserSignIn() {
-  const [errors, setErrors] = useState({}); // State for handling form errors
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // TODO: remove this and add protected routes
-  const navigate = useNavigate();
-  
-  // Function to handle form submission
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const email = formData.get('email');
-    const password = formData.get('password');
+    const schema = yup.object().shape({
+      email: yup.string().email().required("Email is required"),
+      password: yup.string().required("Password is required"),
+    })
 
-    const newErrors = {};
-
-    // Validating email
-    if (!email || !validateEmail(email)) {
-      newErrors.email = 'Valid email is required';
+    // Form validation
+    const {register, handleSubmit, formState: {errors} } = useForm({
+      resolver: yupResolver(schema)
+    });
+    const onSubmit = (data) => {  
+      console.log(data);
+      console.log("data submitted");
     }
-    // Checking if password is provided
-    if (!password) {
-      newErrors.password = 'Password is required';
-    }
-
-    // Checking if there are any errors
-    if (Object.keys(newErrors).length === 0) {
-      console.log('Form submitted successfully');
-      // TODO: Handle form submission, e.g., send data to backend
-      // TODO: add error handling for email or password
-      // Clear errors
-      if (email === 'percs@mail.com' && password === 'password') {
-        // Successful login, you can redirect or do anything else here
-        setErrors({});
-        setIsLoggedIn(true);
-        navigate("/home")
-        console.log('Login successful');
-        
-      } else {
-        setErrors({});
-        setErrors('Invalid email or password');
-      }
-    } else {
-      console.error('Form submission failed');
-      setErrors(newErrors); // Update errors state
-    }
-  };
 
   return (
     <ThemeProvider theme={PercsSecondaryTheme}> {/* Applying custom MUI theme */}
@@ -114,7 +77,7 @@ export default function UserSignIn() {
             Login
           </Typography>
           {/* Form for user sign-in */}
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate sx={{ mt: 1 }}>
             {/* Input field for email */}
             <TextField
               margin="normal"
@@ -125,9 +88,9 @@ export default function UserSignIn() {
               name="email"
               autoComplete="email"
               variant='standard'
-              error={!!errors.email} // Applying error state
-              helperText={errors.email} // Error message
               autoFocus
+              helperText={errors.email?.message}
+              {...register('email')}
             />
             {/* Input field for password */}
             <TextField
@@ -139,8 +102,8 @@ export default function UserSignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
-              error={!!errors.password} // Applying error state
-              helperText={errors.password} // Error message
+              helperText={errors.password?.message}
+              {...register('password')}
               variant='standard'
             />
             {/* Checkbox for "Remember me" */}
