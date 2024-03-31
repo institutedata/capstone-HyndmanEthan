@@ -1,4 +1,6 @@
-import React from 'react';
+// Page Not Found component
+// This file is used to render the 404 page when a user navigates to a page that does not exist.
+
 
 const NotFoundPage = () => {
   return (

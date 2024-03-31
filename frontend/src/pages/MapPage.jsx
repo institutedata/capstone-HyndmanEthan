@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import MapComponent from "../components/Map/MapComponent";
 import MapWrapper from "../components/Map/MapWrapper";
 import { defaultPosition, defaultZoomLevel } from "../config/global";

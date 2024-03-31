@@ -1,4 +1,6 @@
 // MapContainer.js
+// This file is used to wrap the map component with the APIProvider component from @vis.gl/react-google-maps.
+// This is necessary to provide the Google Maps API key to the map component.
 import React from "react";
 import { APIProvider } from "@vis.gl/react-google-maps";
 // import MapComponent from "./MapComponent";

@@ -62,6 +62,7 @@ export default function UserSignUp() {
     }
 
   return (
+    // Theme for the page
     <ThemeProvider theme={PercsSecondaryTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />

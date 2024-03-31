@@ -3,6 +3,7 @@ const { Schema, model } = require('mongoose')
 const cardSchema = new Schema(
   {
     title: { type: String, required: true },
+    logo: { type: String, trim: true, required: true },
     description: { type: String, required: true },
     stamp: [{ type: Schema.Types.ObjectId, ref: 'Stamp' }],
     user: { type: Schema.Types.ObjectId, ref: 'User' },

@@ -24,10 +24,6 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 
 const App = () => (
-
-  
-  
-  
   <Router>
     <div>
       <TopNavBarRoutes allowedPaths={['/home', '/vendors', '/freebies' ]}/>
@@ -44,7 +40,6 @@ const App = () => (
     </div>
   </Router>
 )
-
 export default App;
 
 

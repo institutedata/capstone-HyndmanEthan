@@ -1,27 +1,46 @@
-// PinComponent.js
-import React from "react";
+// Desc: This file contains the MapPins which is responsible for rendering the pins on the map.
+// The MapPins fetches the data from the server using the useDataFetcher hook and renders the pins on the map.
+// TODO: Add InfoWindow to display vendor details when a pin is clicked.
 import { AdvancedMarker, Pin } from "@vis.gl/react-google-maps";
+import GLOBAL from "../../config/global";
+import useDataFetcher from "../../utils/useDataFetcher"; // Import fetcher
 
-const PinComponent = ({ pins, markerRef, toggleInfoWindow }) => {
+const MapPins = ({ pins: propPins, markerRef, toggleInfoWindow }) => {
+  
+  const pinRefs = {};
+
   return (
     <>
-      {pins.map((pin) => (
+    
+      {propPins.map((pin) => (
         <AdvancedMarker
-          key={pin.id}
+          key={pin._id}
           title={pin.vendorName}
           position={{ lat: pin.lat, lng: pin.lng }}
-          onClick={() => toggleInfoWindow(pin)} // Pass the pin to toggleInfoWindow
-          ref={markerRef} // Assuming markerRef is used elsewhere
+          onClick={() => toggleInfoWindow(pin)}
+          ref={(ref) => (pinRefs[pin._id] = ref)} // Store ref in pinRefs
         >
-          <Pin
-            background={"#FBBC04"}
-            glyphColor={"#000"}
-            borderColor={"#000"}
-          />
+          
+          <Pin background={"#FBBC04"} glyphColor={"#000"} borderColor={"#000"} />
         </AdvancedMarker>
       ))}
+      {console.log(pinRefs)} {/* Log pinRefs these will be used to set the markers for each of the infowindows (vendor cards in the maps) */}
     </>
   );
 };
 
+const PinComponent = () => {
+  const { loading, data: pins, error } = useDataFetcher(`${GLOBAL.SERVER_URL}/pins/pin`);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  return <MapPins pins={pins.data} />;
+};
+
 export default PinComponent;
+
