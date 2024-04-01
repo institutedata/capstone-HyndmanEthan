@@ -1,7 +1,9 @@
 'use strict'
 module.exports = {
- User: require('./user'),
+ Card: require('./card'),
  Pin: require('./pin'),
+ Stamp: require('./stamp'),
+ Token: require('./token'),
+ User: require('./user'),
  Vendor: require('./vendor')
 };
-// TODO: Add the rest of the models here

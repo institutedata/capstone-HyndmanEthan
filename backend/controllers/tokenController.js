@@ -1,9 +1,9 @@
 "use strict";
 let Models = require("../models"); //matches index.js
 
-const getCards = (res) => {
-  //finds all Cards
-  Models.Card.find({})
+const getTokens = (res) => {
+  //finds all Tokens
+  Models.Token.find({})
     .then((data) => res.send({ result: 200, data: data }))
     .catch((err) => {
       console.log(err);
@@ -13,10 +13,10 @@ const getCards = (res) => {
 
 
 
-const createCard = (data, res) => {
+const createToken = (data, res) => {
     //creates a new Vendor using JSON data POSTed in request body
     console.log(data);
-    new Models.Card(data)
+    new Models.Token(data)
       .save()
       .then((data) => res.send({ result: 200, data: data }))
       .catch((err) => {
@@ -27,10 +27,10 @@ const createCard = (data, res) => {
 
 
 
-const updateCard = (req, res) => {
-  //updates the Card matching the ID from the param   using JSON data POSTed in request body
+const updateToken = (req, res) => {
+  //updates the Token matching the ID from the param   using JSON data POSTed in request body
   console.log(req.body);
-  Models.Card.findByIdAndUpdate(req.params.id, req.body, {
+  Models.Token.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   })
     .then((data) => res.send({ result: 200, data: data }))
@@ -40,13 +40,13 @@ const updateCard = (req, res) => {
     });
 };
 
-const deleteCard = (req, res) => {
-  //deletes the Card matching the ID from the param
-  Models.Card.findByIdAndDelete(req.params.id)
+const deleteToken = (req, res) => {
+  //deletes the Token matching the ID from the param
+  Models.Token.findByIdAndDelete(req.params.id)
   .then((data) => {
     if (!data) {
-      // If vendor with the given ID doesn't exist
-      return res.status(404).send({ result: 404, error: "Card not found" });
+      // If Token with the given ID doesn't exist
+      return res.status(404).send({ result: 404, error: "Token not found" });
     }
     res.send({ result: 200, data: data });
   })
@@ -57,8 +57,8 @@ const deleteCard = (req, res) => {
 };
 
 module.exports = {
-  getCards,
-  createCard,
-  updateCard,
-  deleteCard,
+  getTokens,
+  createToken,
+  updateToken,
+  deleteToken,
 };
