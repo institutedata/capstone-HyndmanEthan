@@ -1,46 +1,51 @@
 # Capstone Objectives
+This document provides a basic itemized list of tasks that have been identified as being required for the Percs project.
+</br>
+[Back to README](/Documents/Word-PDF/README.md)
 ## Main tasks
 ### Documentation
-- [] 1. Background
-- [] 2. Scope
-- [] 3. Aim
+- [x] 1. Background
+- [x] 2. Description
+- [x] 3. Aim
 - [x] 4. Objectives
 - [x] 5. Timeline
 - [x] 6. Workflows
 - [x] 7. Data structure
-- [] 8. usage? (who will actually be end user what does this look like)
-- [] 9. Version control management (create branch for updates and keep current working build on main)
-- [] 10. Create README.md (provide context and guidelines for working on the project)
-- [] 11. Record what libraries and frameworks used and why
-- [] 12. 
+- [x] 8. usage? (who will actually be end user what does this look like)
+- [x] 9. Version control management (create branch for updates and keep current working build on main)
+- [x] 10. Create README.md (provide context and guidelines for working on the project)
+- [ ] 11. Record what libraries and frameworks used and why
+- [ ] 12. 
 
 ### Frontend objectives
 - [x] 1. Planning
-- [] 2. Vendor tile component
-- [] 3. Vendor Map pins (pull data from backend)
-- [] 4. Vendor card layout (mui grids)
-- [] 5. Free coffee page (cards and grids basic setup)
-- [] 6. Integration of front and backend
-- [] 7. Logic for handling count of stamps and coffee cards (For loops)
-- [] 8. User login logic (in conjunction with backend auths)
-- [] 9. Fix current bugs and errors (document known bugs first collate and record hand written notes)
-- [] 10. Protected routes
-- [] 11. Testing (vite)
-- [] 12. Internationalisation
-- [] 13. Accessability (use lighthouse to check)
-- [] 14. metadata (SEO)
+- [ ] 2.  Vendor tile component
+- [ ] 3. Vendor Map pins (pull data from backend)
+- [ ] 4. Vendor card layout (mui grids)
+- [ ] 5. Free coffee page (cards and grids basic setup)
+- [ ] 6. Integration of front and backend
+- [ ] 7. Logic for handling count of stamps and coffee cards (For loops)
+- [ ] 8. User login logic (in conjunction with backend auths)
+- [ ] 9. Fix current bugs and errors (document known bugs first collate and record hand written notes)
+- [ ] 10. Protected routes
+- [ ] 11. Testing (Bruno)
+- [ ] 12. Internationalization
+- [ ] 13. Accessability (use lighthouse to check)
+- [ ] 14. metadata (SEO)
 
 ### Backend objectives
 - [x] 1. Planning
-- [] 2. Schemas (for new collections being added)
-- [] 3. controllers/routing fro new models
-- [] 4. Authentication
-- [] 5. Authorizations
-- [] 6. Swagger docs for new schemas
-- [] 7. Bruno testing of routes
+- [ ] 2. Schemas (for new collections being added)
+- [ ] 3. controllers/routing fro new models
+- [ ] 4. Authentication
+- [ ] 5. Authorizations
+- [ ] 6. Swagger docs for new schemas
+- [ ] 7. Bruno testing of routes
 
 <!-- FE: Frontend issue, BE: Backend issue -->
 ## Known issues/Bugs
-- [] FE: Hardcoded css values (Improve responsiveness, sign in/up, topnavbar logo, vendor details)
-- [] FE: NavBar overlaying on pages (add to pages then stop rerender)
-- [] : 
+- [ ] FE: Hardcoded css values (Improve responsiveness, sign in/up, topnavbar logo, vendor details)
+- [ ] FE: NavBar overlaying on pages (add to pages then stop rerender)
+- [ ] : 
+</br>
+[Back to top](#)
