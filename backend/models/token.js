@@ -1,16 +1,15 @@
 const { Schema, model } = require('mongoose')
 
-const stampSchema = new Schema(
+const tokenSchema = new Schema(
   {
-    card: { type: Schema.Types.ObjectId, ref: 'Card' },
     user: { type: Schema.Types.ObjectId, ref: 'User' },
     vendor: { type: Schema.Types.ObjectId, ref: 'Vendor' },
-    stamps: { type: Number, required: true },
+    tokens: { type: Number, required: true },
   },
   {
     timestamps: true,
-    collection: 'Stamp',
+    collection: 'Token',
   }
 )
 
-module.exports = model('Stamp', stampSchema)
+module.exports = model('Token', tokenSchema)
