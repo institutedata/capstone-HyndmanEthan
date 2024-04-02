@@ -65,10 +65,25 @@ const deleteVendor = (req, res) => {
     });
 };
 
-const loginVendor = (req, res) => {
-  const { emailId, password } = req.body;
+const getVendorById = (req, res) => {
+  // Retrieves the Vendor matching the ID from the params
+  Models.Vendor.findById(req.params.id)
+    .then((data) => {
+      if (!data) {
+        return res.status(404).json({ result: 404, error: 'Vendor not found' });
+      }
+      res.json({ result: 200, data: data });
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ result: 500, error: err.message });
+    });
+};
 
-  Models.Vendor.findOne({ emailId: emailId })
+const loginVendor = (req, res) => {
+  const { email, password } = req.body;
+
+  Models.Vendor.findOne({ email: email })
     .then((vendor) => {
       if (!vendor) {
         return res.status(400).send("Wrong email or password");
@@ -105,5 +120,6 @@ module.exports = {
   createVendor,
   updateVendor,
   deleteVendor,
+  getVendorById,
   loginVendor
 };

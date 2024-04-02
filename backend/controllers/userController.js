@@ -15,9 +15,9 @@ const getUsers = (res) => {
 };
 
 const loginUser = (req, res) => {
-  const { emailId, password } = req.body;
+  const { email, password } = req.body;
 
-  Models.User.findOne({ emailId: emailId })
+  Models.User.findOne({ email: email })
     .then((user) => {
       if (!user) {
         return res.status(400).send("Wrong username or password");

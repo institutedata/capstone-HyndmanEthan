@@ -4,8 +4,9 @@ const cardSchema = new Schema(
   {
     title: { type: String, required: true },
     logo: { type: String, trim: true, required: true },
-    description: { type: String, required: true },
-    user: { type: Schema.Types.ObjectId, ref: 'User' },
+    address: { type: String, trim: true, required: true },
+    description: { type: String, trim: true, required: true },
+    link: { type: String, required: true },
     vendor: { type: Schema.Types.ObjectId, ref: 'Vendor' },
     
   },

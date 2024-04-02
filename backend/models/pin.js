@@ -5,6 +5,8 @@ const Schema = mongoose.Schema
 const pinSchema = new Schema(
   {
     vendorName: { type: String, required: true },
+    vendor: { type: Schema.Types.ObjectId, ref: 'Vendor' },
+    card: { type: Schema.Types.ObjectId, ref: 'Card' },
     lat: {
       type: Number,
       required: true,
