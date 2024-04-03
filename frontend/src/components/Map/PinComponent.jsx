@@ -18,10 +18,10 @@ const MapPins = ({ pins: propPins, markerRef, toggleInfoWindow }) => {
           title={pin.vendorName}
           position={{ lat: pin.lat, lng: pin.lng }}
           onClick={() => toggleInfoWindow(pin)}
-          ref={(ref) => (pinRefs[pin._id] = ref)} // Store ref in pinRefs
+          ref={(ref) => (pinRefs[pin.card] = ref)} // Store ref in pinRefs
         >
           
-          <Pin background={"#FBBC04"} glyphColor={"#000"} borderColor={"#000"} />
+          <Pin background={"#FBBC04"} glyphColor={"#000"} borderColor={"#000"}  />
         </AdvancedMarker>
       ))}
       {console.log(pinRefs)} {/* Log pinRefs these will be used to set the markers for each of the infowindows (vendor cards in the maps) */}
@@ -30,7 +30,7 @@ const MapPins = ({ pins: propPins, markerRef, toggleInfoWindow }) => {
 };
 
 const PinComponent = () => {
-  const { loading, data: pins, error } = useDataFetcher(`${GLOBAL.SERVER_URL}/pins/pin`);
+  const { loading, data: pins, error } = useDataFetcher(`${GLOBAL.SERVER_URL}/pins/`);
   if (loading) {
     return <div>Loading...</div>;
   }

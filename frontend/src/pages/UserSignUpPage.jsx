@@ -13,6 +13,8 @@ import Logo from "../assets/img/Logo.png";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import GLOBAL from "../config/global";
+import axios from "axios";
 
 // Uses mui components to create a sign up form for new users
 // Uses react-hook-form and yup for form validation
@@ -48,7 +50,7 @@ export default function UserSignUp() {
   const schema = yup.object().shape({
     username: yup.string().required("Username is required"),
     email: yup.string().email().required("Email is required"),
-    password: yup.string().required("Password is required"),
+    password: yup.string().min(6).required("Password is required"),
     confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match')
   })
 
@@ -56,9 +58,21 @@ export default function UserSignUp() {
     const {register, handleSubmit, formState: {errors} } = useForm({
       resolver: yupResolver(schema)
     });
-    const onSubmit = (data) => {  
+    const onSubmit = async (data) => {  
       console.log(data);
-      console.log("data submitted");
+      console.log("data sent to server");
+      try {
+        // Send vendor data to server
+        console.log("data sent to server");
+        const res = await axios.post(`${GLOBAL.SERVER_URL}/users/create`,
+          data // data with users information
+        );
+        // Handle success response
+        console.log(res.data); // Assuming the response contains relevant data
+      } catch (err) {
+        // Handle error
+        console.error("An error occurred:", err);
+      }
     }
 
   return (

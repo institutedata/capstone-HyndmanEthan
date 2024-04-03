@@ -22,7 +22,7 @@ const FavoriteButton = ({ isFavorite, onToggle }) => {
       aria-label={favorite ? "Remove from favorites" : "Add to favorites"}
       style={{
         backgroundColor: "transparent",
-        color: favorite ? "red" : "black", // Adjust colors as needed
+        color: favorite ? "red" : "black", 
         border: "none",
       }}
     >

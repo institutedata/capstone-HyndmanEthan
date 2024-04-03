@@ -3,12 +3,12 @@ import Box from '@mui/material/Box';
 import { ThemeProvider } from '@mui/material';
 import WelcomeMessageTheme from '../../styles/WelcomeMessageTheme';
 
-const WelcomeMessage = ({ username, randomQuote }) => {
+const WelcomeMessage = ({randomQuote }) => {
   return (
     <ThemeProvider theme={WelcomeMessageTheme}>
     <Box>
       <Typography variant="h4" component="h2" align="center" gutterBottom style={{ marginTop: '20px' }}sx={{ fontFamily: 'Bree Serif' }} >
-        Welcome back {username}
+        Welcome!
       </Typography>
       <Typography variant="body1" align="center" >
         {randomQuote}

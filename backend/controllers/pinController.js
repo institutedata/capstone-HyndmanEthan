@@ -1,5 +1,7 @@
 "use strict";
 let Models = require("../models"); //matches index.js
+// TODO: add getbyid
+
 
 const getPins = (res) => {
   //finds all Pins

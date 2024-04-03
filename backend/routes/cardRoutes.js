@@ -3,7 +3,7 @@ let router = express.Router();
 let Controllers = require("../controllers"); //index.js
 
 router.get("/", (req, res) => {
-  Controllers.cardController.getCard(res);
+  Controllers.cardController.getCards(res);
 });
 
 router.post("/create", (req, res) => {

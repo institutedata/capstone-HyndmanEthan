@@ -15,7 +15,8 @@ import Logo from '../assets/img/Logo.png'; // Importing image file
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-
+import axios from 'axios'; 
+import GLOBAL from "../config/global";
 
 // Component for displaying copyright information
 function Copyright(props) {
@@ -43,10 +44,28 @@ export default function UserSignIn() {
     const {register, handleSubmit, formState: {errors} } = useForm({
       resolver: yupResolver(schema)
     });
-    const onSubmit = (data) => {  
+    const onSubmit = async (data) => {  
       console.log(data);
-      console.log("data submitted");
-    }
+
+      try {
+        console.log("data sent to server");
+        const res = await axios.post(`${GLOBAL.SERVER_URL}/users/login`,
+          data // data with users information
+        );
+        // Handle success response
+        // console.log("Login successful!");
+        console.log(res.data);
+      } catch (err) {
+        // Handle error response
+        if (err.response && err.response.status === 401) {
+          console.error("Incorrect email or password");
+          // You can set an error state here to display a message to the user
+        } else {
+          console.error("An error occurred:", err);
+          // Handle other types of errors
+        }
+      }
+    }  
 
   return (
     <ThemeProvider theme={PercsSecondaryTheme}> {/* Applying custom MUI theme */}

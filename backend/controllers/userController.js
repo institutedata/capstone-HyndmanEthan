@@ -2,7 +2,7 @@
 const bcrypt = require("bcrypt");
 let generateToken = require("../config/jwtGenerateToken");
 let Models = require("../models"); //matches index.js
-
+// TODO: add getbyid
 
 const getUsers = (res) => {
   //finds all users
@@ -16,23 +16,26 @@ const getUsers = (res) => {
 
 const loginUser = (req, res) => {
   const { email, password } = req.body;
-
+  // console.log(req.body);
+  console.log(email, password);
   Models.User.findOne({ email: email })
     .then((user) => {
       if (!user) {
         return res.status(400).send("Wrong username or password");
       }
-
+      console.log(user);
       bcrypt
         .compare(password, user.password)
         .then((match) => {
+          console.log('Password:', password);
+    console.log('Hashed Password:', user.password);
           if (match) {
             // Generate JWT token
             const token = generateToken(user._id);
 
             res.json({
               token: token,
-              message: `Successful login, welcome ${user.userName}`,
+              message: `Successful login, welcome ${user.username}`,
             });
           } else {
             res.status(400).send("Wrong username or password");

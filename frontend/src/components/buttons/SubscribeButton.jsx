@@ -22,7 +22,7 @@ const SubscribeButton = ({ isSubscribed, onToggle }) => {
       aria-label={subscribed ? "Unsubscribe" : "Subscribe"}
       style={{
         backgroundColor: "transparent",
-        border: "none",
+        border: "black",
         color: subscribed ? "yellow" : "black",
       }}
     >
