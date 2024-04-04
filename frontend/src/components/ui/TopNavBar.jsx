@@ -17,6 +17,9 @@ import axios from "axios";
 import UserContext from '../../utils/userContext';
 import { useNavigate } from 'react-router-dom';
 
+
+// TODO: Add delete user functionality
+
 // Top navigation bar component
 const settings = ["Username", "Settings", "Delete", "Logout"];
 
@@ -72,13 +75,13 @@ function TopNavBar() {
     if (usernameUpdated) {
       // Add logic to delete account here
       try {
-        const response = await axios.put(`${GLOBAL.SERVER_URL}/users/${user.id}`, {
+        const res = await axios.put(`${GLOBAL.SERVER_URL}/users/${user.id}`, {
           _id: user.id,
           username: newUsername,
           email: user.email,
           password: user.password
         });
-        console.log('Updated successfully:', response.data);
+        console.log('Updated successfully:', res.data);
         // Handle success, maybe show a success message or redirect user
       } catch (error) {
         console.error('Error updating:', error);
@@ -99,11 +102,20 @@ function TopNavBar() {
     handleCloseModal();
   };
 
-  const handleSubmitDeleteForm = (e, deleteConfirmed) => {
+  const handleSubmitDeleteForm = async (e, deleteConfirmed) => {
     e.preventDefault();
     if (deleteConfirmed) {
       // Add logic to delete account here
-      console.log("Account deleted");
+      try {
+        const res = await axios.delete(`${GLOBAL.SERVER_URL}/users/${user.id}`);
+        // Handle successful deletion here
+        console.log("Account deleted successfully"); 
+        setUser(null);
+        navigate("/signin") // Redirect to sign-in page after account deletion
+    } catch (error) {
+        // Handle error
+        console.error('Error deleting user:', error);
+    }
       
     } else {
       // Handle canceling logout
