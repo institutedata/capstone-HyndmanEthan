@@ -9,11 +9,12 @@ import UserContext from '../../utils/userContext';
 
 const WelcomeMessage = ({randomQuote }) => {
   const { user } = useContext(UserContext);
+  console.log(user);
   return (
     <ThemeProvider theme={WelcomeMessageTheme}>
     <Box>
       <Typography variant="h4" component="h2" align="center" gutterBottom style={{ marginTop: '20px' }}sx={{ fontFamily: 'Bree Serif' }} >
-        Welcome {user && user.name ? user.name: 'Coffee'}!
+        Welcome {user && user.username ? user.username: 'Coffee'}!
       </Typography>
       <Typography variant="body1" align="center" >
         {randomQuote}
