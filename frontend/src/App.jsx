@@ -20,10 +20,14 @@ import BottomNavBarRoutes from "./components/ui/BottomNavBarRoutes";
 import TopNavBarRoutes from "./components/ui/TopNavBarRoutes";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import { useState } from "react";
+import { UserProvider } from "./utils/userContext";
 
 
-
-const App = () => (
+const App = () => {
+  const [user, setUser] = useState(null);
+  return (
+    <UserProvider value={[user, setUser]}>
   <Router>
     <div>
       <TopNavBarRoutes allowedPaths={['/home', '/vendors', '/freebies' ]}/>
@@ -39,7 +43,9 @@ const App = () => (
     <BottomNavBarRoutes allowedPaths={['/home', '/map', '/vendors', '/freebies' ]} />
     </div>
   </Router>
-)
+  </UserProvider>
+  )
+  }
 export default App;
 
 

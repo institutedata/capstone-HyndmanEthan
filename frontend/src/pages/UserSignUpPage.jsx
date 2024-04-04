@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -46,6 +47,9 @@ function Copyright(props) {
 
 // Sign up form
 export default function UserSignUp() {
+
+  const [errorText, setErrorText] = useState('');
+
   // Form validation schema
   const schema = yup.object().shape({
     username: yup.string().required("Username is required"),
@@ -66,12 +70,15 @@ export default function UserSignUp() {
         console.log("data sent to server");
         const res = await axios.post(`${GLOBAL.SERVER_URL}/users/create`,
           data // data with users information
+
         );
         // Handle success response
         console.log(res.data); // Assuming the response contains relevant data
+        setErrorText("User created successfully. Please log in.");
       } catch (err) {
-        // Handle error
+        // Handle error response
         console.error("An error occurred:", err);
+        setErrorText(err.response.data.error || "An error occurred.");
       }
     }
 
@@ -133,6 +140,7 @@ export default function UserSignUp() {
                   name="email"
                   variant="standard"
                   helperText={errors.email?.message}
+                  
                   {...register('email')}
                 />
               </Grid>
@@ -163,6 +171,11 @@ export default function UserSignUp() {
                 />
               </Grid>
             </Grid>
+            {errorText && (
+          <Typography variant="body2" color="error"  sx={{ mt: 2 }}>
+            {errorText}
+          </Typography>
+        )}
             <Button
               type="submit"
               fullWidth
