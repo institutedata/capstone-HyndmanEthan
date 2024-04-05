@@ -72,10 +72,10 @@ export default function UserSignIn() {
       );
       // Handle success response
       console.log("Login successful!");
-      // navigate("/home"); // Redirect to home page
+      navigate("/home"); // Redirect to home page
       setUser(res.data); // Set user context
       console.log(user.message);
-      
+
       setErrorText("");
 
     } catch (err) {

@@ -1,3 +1,5 @@
+// creation of list in vendor page, with the ability to click on a vendor and see more information about them
+//  TODO: break this, vendor stamps and the maps pin modal into smaller reusable components
 import { useState, useEffect } from "react";
 import Divider from "@mui/material/Divider";
 import { Card, Typography, Box } from "@mui/material";
@@ -6,10 +8,8 @@ import Backdrop from "@mui/material/Backdrop";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import CardActionArea from "@mui/material/CardActionArea";
-
 import GLOBAL from "../../config/global";
 import axios from "axios";
-
 import {
   Paper,
   CardMedia,
@@ -18,8 +18,7 @@ import {
   CardActions,
 } from "@mui/material";
 import Button from "@mui/material/Button";
-
-import SubscribeButton from "../buttons/SubscribeButton";
+import FavouriteButton from "../buttons/FavouriteButton";
 
 const style = {
   position: "absolute",
@@ -111,6 +110,7 @@ const VendorList = ({ title, initialSubscribed }) => {
                         width: "100%",
                         maxHeight: 200,
                         objectFit: "contain",
+                        margin: 2,
                       }}
                       image={card.logo}
                       alt={card.title}
@@ -132,7 +132,7 @@ const VendorList = ({ title, initialSubscribed }) => {
                         Visit Website
                       </Button>
                     </a>
-                    <SubscribeButton />
+                    <FavouriteButton />
                   </CardActions>
                 </Paper>
               </Box>

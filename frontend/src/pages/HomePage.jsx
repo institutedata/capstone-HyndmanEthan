@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
-
 import { Divider, Box } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import PercsPrimaryTheme from "../styles/PercsPrimaryTheme";
-import quotesData from "../assets/data/coffeeQuotes.json"; // Import the quotes data
+import quotesData from "../assets/data/coffeeQuotes.json"; 
 import WelcomeMessage from "../components/ui/WelcomeMessage";
-import FetchVendorInfo from "../components/vendorTiles/FetchVendorInfo";
-// import VendorCard from "../components/vendorTiles/VendorCard";
+import VendorStamps from "../components/vendorTiles/VendorStamps";
 
 const HomePage = () => {
   // State for storing random quote
@@ -16,8 +14,6 @@ const HomePage = () => {
   const [randomQuote, setRandomQuote] = useState("");
 
   useEffect(() => {
-
-
     // Get a random quote from the quotes data
     const getRandomQuote = () => {
       const randomIndex = Math.floor(Math.random() * quotesData.length);
@@ -34,7 +30,6 @@ const HomePage = () => {
         {/* Use WelcomeMessage component */}
         <WelcomeMessage randomQuote={randomQuote} />
 
-
         <Box>
           <Divider style={{ margin: "20px 0" }} />
           <Typography
@@ -45,8 +40,8 @@ const HomePage = () => {
           >
             Subscribed Vendors
           </Typography>
-          {/* <VendorCard /> */}
-          <FetchVendorInfo></FetchVendorInfo>
+
+          <VendorStamps />
         </Box>
       </Container>
     </ThemeProvider>

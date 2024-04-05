@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AdvancedMarker, Pin } from "@vis.gl/react-google-maps";
 import { Modal, Backdrop, Fade, Paper, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
-import SubscribeButton from "../buttons/SubscribeButton";
+import FavouriteButton from "../buttons/FavouriteButton";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
 import CardHeader from "@mui/material/CardHeader";
@@ -86,6 +86,8 @@ const MapPins = ({ pins: propPins, cards: propCards }) => {
                           width: "100%",
                           maxHeight: 200,
                           objectFit: "contain",
+                          margin: 4,
+                          padding: 3
                         }}
                         image={findCardForPin(pin).logo}
                         alt={findCardForPin(pin).title}
@@ -107,7 +109,7 @@ const MapPins = ({ pins: propPins, cards: propCards }) => {
                           Visit Website
                         </Button>
                       </a>
-                      <SubscribeButton />
+                      <FavouriteButton />
                     </CardActions>
                   </Paper>
                   </Box>
