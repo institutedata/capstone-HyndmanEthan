@@ -2,7 +2,7 @@
 const bcrypt = require("bcrypt");
 let generateToken = require("../config/jwtGenerateToken");
 let Models = require("../models"); //matches index.js
-// TODO: add getbyid
+
 
 const getUsers = (res) => {
   //finds all users
@@ -34,8 +34,10 @@ const loginUser = (req, res) => {
             const token = generateToken(user._id);
 
             res.json({
-              token: token,
-              message: `Successful login, welcome ${user.username}`,
+              // user data
+              username: user.username,
+              id: user._id,
+              email: user.email,
             });
           } else {
             res.status(400).send("Wrong username or password");

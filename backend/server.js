@@ -34,6 +34,7 @@ app.get('/', (req, res) => {
 
 let cardRoutes = require('./routes/cardRoutes')
 let pinRoutes = require('./routes/pinRoutes')
+// Not in use
 // let stampRoutes = require('./routes/stampRoutes')
 let tokenRoutes = require('./routes/tokenRoutes')
 let userRoutes = require('./routes/userRoutes')
@@ -41,6 +42,7 @@ let vendorRoutes = require('./routes/vendorRoutes')
 
 app.use('/cards', cardRoutes);
 app.use('/pins', pinRoutes);
+// Not in use
 // app.use('/stamps', stampRoutes);
 app.use('/tokens', tokenRoutes);
 app.use('/users', userRoutes);

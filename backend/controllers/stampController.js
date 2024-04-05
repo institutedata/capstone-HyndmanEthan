@@ -1,5 +1,6 @@
 "use strict";
 let Models = require("../models"); //matches index.js
+
 // TODO: add getbyid
 
 
@@ -12,6 +13,38 @@ const getStamps = (res) => {
       res.send({ result: 500, error: err.message });
     });
 };
+
+
+
+
+
+
+const createUserStamp = (data, res) => {
+    
+    const user = req.params.user; 
+    const stampPromises = cards.map(card => {
+        const stampData = {
+            user: user, 
+            card: card._id, 
+            
+            vendor: card.vendor, 
+            subscribed: false, 
+            stamps: 0 
+        };
+        const newStamp = new Stamp(stampData);
+        return newStamp.save();
+    });
+
+    Promise.all(stampPromises)
+        .then(stamps => {
+            res.send({ result: 200, data: stamps });
+        })
+        .catch(err => {
+            console.error(err);
+            res.send({ result: 500, error: err.message });
+        });
+};
+
 
 
 
@@ -60,6 +93,7 @@ const deleteStamp = (req, res) => {
 
 module.exports = {
   getStamps,
+  createUserStamp,
   createStamp,
   updateStamp,
   deleteStamp,
