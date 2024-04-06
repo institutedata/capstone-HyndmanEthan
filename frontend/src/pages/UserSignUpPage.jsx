@@ -49,6 +49,7 @@ function Copyright(props) {
 export default function UserSignUp() {
 
   const [errorText, setErrorText] = useState('');
+  const [accountCreationText, setAccountCreationText] = useState('');
 
   // Form validation schema
   const schema = yup.object().shape({
@@ -74,11 +75,13 @@ export default function UserSignUp() {
         );
         // Handle success response
         console.log(res.data); // Assuming the response contains relevant data
-        setErrorText("User created successfully. Please log in.");
+        setAccountCreationText("Account created successfully!");
+        setErrorText("");
       } catch (err) {
         // Handle error response
         console.error("An error occurred:", err);
         setErrorText(err.response.data.error || "An error occurred.");
+        setAccountCreationText("");
       }
     }
 
@@ -175,6 +178,13 @@ export default function UserSignUp() {
           <Typography variant="body2" color="error"  sx={{ mt: 2 }}>
             {errorText}
           </Typography>
+          
+        )}
+            {accountCreationText && (
+          <Typography variant="body2" color="secondary"  sx={{ mt: 2 }}>
+            {accountCreationText}
+          </Typography>
+          
         )}
             <Button
               type="submit"

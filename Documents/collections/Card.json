@@ -1,0 +1,300 @@
+[{
+  "_id": {
+    "$oid": "660b6a9243800244d5b200b2"
+  },
+  "title": "Chur Bae",
+  "logo": "https://images.squarespace-cdn.com/content/v1/61ea47574f77760b42d22df7/e8f1907f-5090-48b7-9116-ca0eb71c9708/door+logo+in+black.png?format=1500w",
+  "address": "Shed 13A/90 Wellesley Street West, Auckland CBD, Auckland 1010",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "https://www.churbae.com/",
+  "vendor": {
+    "$oid": "660b50d944b852aae03d6523"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T02:16:50.771Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T02:16:50.771Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b8163598572963b874628"
+  },
+  "title": "Havana Coffee Works Auckland",
+  "logo": "https://cdn.shopify.com/s/files/1/0567/6443/2444/files/footerlogo.png?v=1654722015",
+  "address": "69G Saint Georges Bay Road, Parnell, Auckland 1052",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "https://havana.co.nz/",
+  "vendor": {
+    "$oid": "660b5de845611f36fa971f6e"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T03:54:11.403Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T03:54:11.403Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b81b0598572963b87462a"
+  },
+  "title": "Allpress Roastery Auckland",
+  "logo": "https://nz.shop.allpressespresso.com/cdn/shop/t/31/assets/logo.svg?v=69666936472058333211652277411",
+  "address": "8 Drake Street, Freemans Bay, Auckland 1010",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "https://www.allpressespresso.com/find/auckland-roastery/",
+  "vendor": {
+    "$oid": "660b5e0545611f36fa971f70"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T03:55:28.278Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T03:55:28.278Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b81f5598572963b87462c"
+  },
+  "title": "Big Sur",
+  "logo": "https://static.wixstatic.com/media/bd9e15_765f083495cc4e14832fc8b712b2dd8d~mv2.png/v1/fill/w_119,h_119,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Big%20Sur%20Logo%20Transparent_tif.png",
+  "address": "432 Richmond Road, Grey Lynn, Auckland 1021",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "https://www.bigsur-greylynn.co.nz/",
+  "vendor": {
+    "$oid": "660b5e2245611f36fa971f72"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T03:56:37.046Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T03:56:37.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b825e598572963b87462e"
+  },
+  "title": "Black Coffee Newtown",
+  "logo": "https://scontent.fakl4-1.fna.fbcdn.net/v/t39.30808-6/294924977_503720588341884_1313358706965816524_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=UQJ4klPLT3EAX9T7kQ_&_nc_ht=scontent.fakl4-1.fna&oh=00_AfB34Ukb8YX1W4jUtKwWMmey26f4wy2XaySTHTrghlk44A&oe=65B70DA9",
+  "address": "6021/133 Riddiford Street, Newtown, Wellington 6021",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "http://www.downtownbrew-cafe.com",
+  "vendor": {
+    "$oid": "660b5e4045611f36fa971f74"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T03:58:22.632Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T03:58:22.632Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b82cb598572963b874630"
+  },
+  "title": "Spectra cafe",
+  "logo": "http://www.spectracafe.co.nz/wp-content/uploads/2020/07/Logo_color.png",
+  "address": "15 Customs Street West, Sky Lobby, PwC Tower Level 7/Commercial Bay, Auckland CBD, Auckland 1010",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "http://www.spectracafe.co.nz/",
+  "vendor": {
+    "$oid": "660b5e6545611f36fa971f77"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:00:11.681Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:00:11.681Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b8307598572963b874632"
+  },
+  "title": "Kokako Organic Coffee Roastery",
+  "logo": "http://www.spectracafe.co.nz/wp-content/uploads/2020/07/Logo_color.png",
+  "address": "9 Charles Street, Mount Eden, Auckland 1024",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "http://www.kokako.co.nz/",
+  "vendor": {
+    "$oid": "660b5e7b45611f36fa971f79"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:01:11.823Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:01:11.823Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b834c598572963b874634"
+  },
+  "title": "Hill House Cafe",
+  "logo": "https://hillhousecafe.co.nz/cdn/shop/files/Logo_rounded.png?v=1661324682&width=500",
+  "address": "70 Hill Road, Hillpark, Auckland 2102",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "http://www.hillhousecafe.co.nz/",
+  "vendor": {
+    "$oid": "660b5e9d45611f36fa971f7b"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:02:20.010Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:02:20.010Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b8383598572963b874636"
+  },
+  "title": "Hare and the Turtle.",
+  "logo": "https://images.squarespace-cdn.com/content/v1/5949a18d1b10e3c738a4e501/1508642035690-ULLGR42DAIBU71W02X4H/Hare+and+the+Turtle+logo.jpg?format=1500w",
+  "address": "1/63 New Windsor Road, New Windsor, Auckland 0600",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "https://www.hareandtheturtle.com/",
+  "vendor": {
+    "$oid": "660b5ecf45611f36fa971f7d"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:03:15.670Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:03:15.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b840d598572963b874638"
+  },
+  "title": "Carmel - Israeli Street Food",
+  "logo": "https://uploads-ssl.webflow.com/5bdb61cc688e3133d6376208/5e9d9e2475abb82a98d91c96_Logo.svg",
+  "address": "67b France Street South, Eden Terrace, Auckland 1010",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "https://www.bycarmel.co.nz/",
+  "vendor": {
+    "$oid": "660b625a45611f36fa971f81"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:05:33.585Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:05:33.585Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b843e598572963b87463a"
+  },
+  "title": "Catroux",
+  "logo": "https://www.catroux.co.nz/cdn/shop/files/catroux-email_280x.png?v=1613565433",
+  "address": "129 West End Road, Westmere, Auckland 1022",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "http://catroux.co.nz/",
+  "vendor": {
+    "$oid": "660b5f0845611f36fa971f7f"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:06:22.827Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:06:22.827Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b847d598572963b87463c"
+  },
+  "title": "Fort Greene",
+  "logo": "https://fortgreene.co.nz/wp-content/uploads/2020/05/FGOficialLogo.jpg",
+  "address": "327 Karangahape Road, Auckland CBD, Auckland 1010",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "http://www.fortgreene.co.nz/",
+  "vendor": {
+    "$oid": "660b627645611f36fa971f83"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:07:25.005Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:07:25.005Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b84a7598572963b87463e"
+  },
+  "title": "Handpicked coffee roaster",
+  "logo": "https://handpickedcoffeenz.com/wp-content/uploads/2020/10/main-logo-sheep-1536x1086.png",
+  "address": "918 New North Road, Mount Albert, Auckland 1025",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "https://handpickedcoffeenz.com/",
+  "vendor": {
+    "$oid": "660b629145611f36fa971f85"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:08:07.672Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:08:07.672Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b84dc598572963b874640"
+  },
+  "title": "Honey Bones",
+  "logo": "https://images.squarespace-cdn.com/content/v1/58feab3c5016e163f200f966/fdee5eb7-136d-476d-b792-a35ce4a8bd1c/HB+Logo+Blue+Horizontal.png?format=750w",
+  "address": "480 Richmond Road, Grey Lynn, Auckland 1021",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "http://www.honeybones.co.nz/",
+  "vendor": {
+    "$oid": "660b62b045611f36fa971f87"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:09:00.878Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:09:00.878Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b8510598572963b874642"
+  },
+  "title": "Odettes Eatery",
+  "logo": "https://www.odettes.co.nz/wp-content/themes/odettes-2016/img/logo-small.png",
+  "address": "90 Wellesley Street West, Auckland CBD, Auckland 1010",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elite",
+  "link": "http://www.odettes.co.nz/",
+  "vendor": {
+    "$oid": "660b62c545611f36fa971f89"
+  },
+  "createdAt": {
+    "$date": "2024-04-02T04:09:52.638Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T04:09:52.638Z"
+  },
+  "__v": 0
+}]

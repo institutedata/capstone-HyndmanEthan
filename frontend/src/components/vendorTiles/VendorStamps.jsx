@@ -44,6 +44,13 @@ const VendorCard = ({ card }) => {
       setIconCount(iconCount - 1);
     }
   };
+  // Function to decrease the stamp count
+  const decreaseTokenCount = () => {
+    if (tokenCount > 0) {
+      // Decrease count if it's greater than 0
+      setTokenCount(tokenCount - 1);
+    }
+  };
 
   // Function to open the modal
   const handleOpenModal = () => {
@@ -149,6 +156,9 @@ const VendorCard = ({ card }) => {
           <Typography variant="h6" component="h3" style={{ textAlign: "center" }}>
             You have earned: {tokenCount} tokens.
           </Typography>
+          <Button color="secondary" onClick={decreaseTokenCount}>
+            Redeem Token
+          </Button>
         </Box>
       </Modal>
     </div>

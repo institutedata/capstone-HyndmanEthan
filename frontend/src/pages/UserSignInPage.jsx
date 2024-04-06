@@ -85,7 +85,7 @@ export default function UserSignIn() {
         setErrorText(err.response.data.error || "Incorrect email or password.");
       } else {
         console.error("An error occurred:", err);
-        setErrorText(err.response.data.error || "Email does not exist.");
+        setErrorText(err.response.data.error || "Incorrect email or password");
       }
     }
   };

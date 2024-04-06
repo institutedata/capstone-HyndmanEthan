@@ -1,0 +1,225 @@
+[{
+  "_id": {
+    "$oid": "660b5dbb45611f36fa971f6c"
+  },
+  "cafe": "Chur Bae",
+  "email": "churbae@mail.com",
+  "password": "password",
+  "createdAt": {
+    "$date": "2024-04-02T01:22:03.177Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T02:00:27.133Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5de845611f36fa971f6e"
+  },
+  "cafe": "Havana Coffee Works Auckland",
+  "email": "havana@cafe.com",
+  "password": "$2b$10$w7ob045QtXXlEGejYwxnR.958P/dlK4qALJt68jkg2uBiTRes41GO",
+  "createdAt": {
+    "$date": "2024-04-02T01:22:48.891Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:22:48.891Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5e0545611f36fa971f70"
+  },
+  "cafe": "Allpress Roastery Auckland",
+  "email": "allpressespresso@cafe.com",
+  "password": "$2b$10$5oY14gR72twJDem2QL0EXesNT6MjkIDQMl68DmynapVr/kRKhs/LK",
+  "createdAt": {
+    "$date": "2024-04-02T01:23:17.503Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:23:17.503Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5e2245611f36fa971f72"
+  },
+  "cafe": "Big Sur",
+  "email": "bigsur@cafe.com",
+  "password": "$2b$10$vEXd3aLCb5ILsv2koAK1euDd68UJs7YG0pFWkTswgfs4gN/TZCxtG",
+  "createdAt": {
+    "$date": "2024-04-02T01:23:46.338Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:23:46.338Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5e4045611f36fa971f74"
+  },
+  "cafe": "Black Coffee Newtown",
+  "email": "downtownbrew@cafe.com",
+  "password": "$2b$10$SetY2.pR3zFp52rZDfNEUOPXaEO3VV0ftJia7qqRe8gvDLFYzUYCS",
+  "createdAt": {
+    "$date": "2024-04-02T01:24:16.122Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:24:16.122Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5e6545611f36fa971f77"
+  },
+  "cafe": "Spectra cafe",
+  "email": "spectra@mail.com",
+  "password": "$2b$10$Uz3mO2LHPBEkO2cdWMu/9.52fWLBeDAHdibNs7d1GCgO1AnEgcenC",
+  "createdAt": {
+    "$date": "2024-04-02T01:24:53.039Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:24:53.039Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5e7b45611f36fa971f79"
+  },
+  "cafe": "Kokako Organic Coffee Roastery",
+  "email": "espressooasis@cafe.com",
+  "password": "$2b$10$vUZiyhRw977oo5S2.8HybuHDFQUPRlbCmjowF9Iorqa2zKbbwc14q",
+  "createdAt": {
+    "$date": "2024-04-02T01:25:15.723Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:25:15.723Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5e9d45611f36fa971f7b"
+  },
+  "cafe": "Hill House Cafe",
+  "email": "citybean@cafe.com",
+  "password": "$2b$10$dr58uWfxE.kj2GK1XYf7kOIyl4xj6kiEw2eP5lpfoKIQ3xiS4nKly",
+  "createdAt": {
+    "$date": "2024-04-02T01:25:49.997Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:25:49.997Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5ecf45611f36fa971f7d"
+  },
+  "cafe": "Hare and the Turtle.",
+  "email": "hareandtheturtle@cafe.com",
+  "password": "$2b$10$fVeVmj5BTtErFkhZhhdltOqLPfdWB/jtGMOvkU2tlztBti2dsQjP6",
+  "createdAt": {
+    "$date": "2024-04-02T01:26:39.650Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:26:39.650Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b5f0845611f36fa971f7f"
+  },
+  "cafe": "Catroux",
+  "email": "catroux@mail.co.nz",
+  "password": "$2b$10$.l0wM6Lh1QI1O.de7VMbE.AGmnL6UNeg3oXcUl6gpZY0w9y3XmR6y",
+  "createdAt": {
+    "$date": "2024-04-02T01:27:36.093Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:27:36.093Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b625a45611f36fa971f81"
+  },
+  "cafe": "Carmel - Israeli Street Food",
+  "email": "skylineespresso@cafe.com",
+  "password": "$2b$10$RiTtG9uxWSQl46V8Ujl3C.o3nm0VnCgitPuu74mAWhC4JZ/SZJcYy",
+  "createdAt": {
+    "$date": "2024-04-02T01:41:46.743Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:41:46.743Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b627645611f36fa971f83"
+  },
+  "cafe": "Fort Greene",
+  "email": "metroblend@cafe.com",
+  "password": "$2b$10$mJuGNpQ0p/lPRTmUxoqrX.92tGecXO3IVRy9hucHg4kbTVKuqzlhe",
+  "createdAt": {
+    "$date": "2024-04-02T01:42:14.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:42:14.592Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b629145611f36fa971f85"
+  },
+  "cafe": "Handpicked coffee roaster",
+  "email": "handpicked@cafe.com",
+  "password": "$2b$10$l8sOyJLkEWkpCEZHhR/I5ubcBDG0o2scpMPMzBB5VjdEzrXV.RYLS",
+  "createdAt": {
+    "$date": "2024-04-02T01:42:41.326Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:42:41.326Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b62b045611f36fa971f87"
+  },
+  "cafe": "Honey Bones",
+  "email": "honeybones@mail.com",
+  "password": "$2b$10$u0v7v..4Ejpie.LplJ4i5u0YfD6S.kYaH1telHaQrgdjb51EjU5t.",
+  "createdAt": {
+    "$date": "2024-04-02T01:43:12.508Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:43:12.508Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660b62c545611f36fa971f89"
+  },
+  "cafe": "Odettes Eatery",
+  "email": "odettes@mail.com",
+  "password": "$2b$10$yyuAngGJt3B7qz/3owLUSOkzczdnMhHH.dSncu0UL/0F.lK7GJ0H.",
+  "createdAt": {
+    "$date": "2024-04-02T01:43:33.478Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T01:43:33.478Z"
+  },
+  "__v": 0
+}]
