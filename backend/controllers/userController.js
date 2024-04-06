@@ -15,24 +15,29 @@ const getUsers = (res) => {
 };
 
 const loginUser = (req, res) => {
-  const { emailId, password } = req.body;
-
-  Models.User.findOne({ emailId: emailId })
+  const { email, password } = req.body;
+  // console.log(req.body);
+  console.log(email, password);
+  Models.User.findOne({ email: email })
     .then((user) => {
       if (!user) {
         return res.status(400).send("Wrong username or password");
       }
-
+      console.log(user);
       bcrypt
         .compare(password, user.password)
         .then((match) => {
+          console.log('Password:', password);
+    console.log('Hashed Password:', user.password);
           if (match) {
             // Generate JWT token
             const token = generateToken(user._id);
 
             res.json({
-              token: token,
-              message: `Successful login, welcome ${user.userName}`,
+              // user data
+              username: user.username,
+              id: user._id,
+              email: user.email,
             });
           } else {
             res.status(400).send("Wrong username or password");

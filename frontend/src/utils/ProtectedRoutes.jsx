@@ -1,12 +1,13 @@
 // ProtectedRoute.js
-import React from 'react';
+// * Protected routes not implemented as context isn't being held locally so is lost on refresh
+import { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
-import { useUserContext } from './UserContext';
+import { UserContext } from './userContext';
 
 const ProtectedRoutes = ({ redirectPath = '/signin', children }) => {
-  const { currentUser } = useUserContext();
+  const { user } = useContext(UserContext);
 
-  if (!currentUser.username) {
+  if (!user.id) {
     return <Navigate to={redirectPath} replace />;
   }
 

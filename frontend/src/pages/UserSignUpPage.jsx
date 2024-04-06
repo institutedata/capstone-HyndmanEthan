@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -13,6 +14,8 @@ import Logo from "../assets/img/Logo.png";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import GLOBAL from "../config/global";
+import axios from "axios";
 
 // Uses mui components to create a sign up form for new users
 // Uses react-hook-form and yup for form validation
@@ -44,11 +47,15 @@ function Copyright(props) {
 
 // Sign up form
 export default function UserSignUp() {
+
+  const [errorText, setErrorText] = useState('');
+  const [accountCreationText, setAccountCreationText] = useState('');
+
   // Form validation schema
   const schema = yup.object().shape({
     username: yup.string().required("Username is required"),
     email: yup.string().email().required("Email is required"),
-    password: yup.string().required("Password is required"),
+    password: yup.string().min(6).required("Password is required"),
     confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match')
   })
 
@@ -56,9 +63,26 @@ export default function UserSignUp() {
     const {register, handleSubmit, formState: {errors} } = useForm({
       resolver: yupResolver(schema)
     });
-    const onSubmit = (data) => {  
+    const onSubmit = async (data) => {  
       console.log(data);
-      console.log("data submitted");
+      console.log("data sent to server");
+      try {
+        // Send vendor data to server
+        console.log("data sent to server");
+        const res = await axios.post(`${GLOBAL.SERVER_URL}/users/create`,
+          data // data with users information
+
+        );
+        // Handle success response
+        console.log(res.data); // Assuming the response contains relevant data
+        setAccountCreationText("Account created successfully!");
+        setErrorText("");
+      } catch (err) {
+        // Handle error response
+        console.error("An error occurred:", err);
+        setErrorText(err.response.data.error || "An error occurred.");
+        setAccountCreationText("");
+      }
     }
 
   return (
@@ -119,6 +143,7 @@ export default function UserSignUp() {
                   name="email"
                   variant="standard"
                   helperText={errors.email?.message}
+                  
                   {...register('email')}
                 />
               </Grid>
@@ -149,6 +174,18 @@ export default function UserSignUp() {
                 />
               </Grid>
             </Grid>
+            {errorText && (
+          <Typography variant="body2" color="error"  sx={{ mt: 2 }}>
+            {errorText}
+          </Typography>
+          
+        )}
+            {accountCreationText && (
+          <Typography variant="body2" color="secondary"  sx={{ mt: 2 }}>
+            {accountCreationText}
+          </Typography>
+          
+        )}
             <Button
               type="submit"
               fullWidth

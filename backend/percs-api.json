@@ -12,15 +12,15 @@
   "tags": [
     {
       "name": "Users",
-      "description": "Operations related to users"
+      "description": "CRUD operations related to users"
     },
     {
       "name": "Pins",
-      "description": "Operations related to pins"
+      "description": "CRUD operations related to pins"
     },
     {
       "name": "Vendors",
-      "description": "Operations related to vendors"
+      "description": "CRUD operations related to vendors"
     }
 
   ],
@@ -78,10 +78,8 @@
                   "$ref": "#/components/schemas/User"
                 },
                 "example": {
-                  "firstName": "Steve",
-                  "lastName": "Dave",
                   "userName": "Stave",
-                  "emailId": "Stave@mail.com",
+                  "email": "Stave@mail.com",
                   "password": "password"
                 }
               }
@@ -303,9 +301,8 @@
               },
               "example": {
                 "vendorName": "Allpress",
-                "emailId": "Allpress@example.com",
-                "logo": "coffee_logo.png",
-                "content": "Coffee",
+                "vendor": "objectid(vendor)",
+                "card": "objectid(card)",
                 "lat": -36.8461131799196,
                 "lng": 174.75550806570064
                  
@@ -530,7 +527,7 @@
                 "cafe": "Allpress",
           "logo": "coffee_logo",
           "address": "8 Drake Street, Freemans Bay, Auckland 1010",
-          "emailId": "Allpress@mail",
+          "email": "Allpress@mail",
           "password": "password"
               }
             }
@@ -710,14 +707,14 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "emailId": {
+                    "email": {
                       "type": "string"
                     },
                     "password": {
                       "type": "string"
                     }
                   },
-                  "required": ["emailId", "password"]
+                  "required": ["email", "password"]
                 }
               }
             }
@@ -796,14 +793,14 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "emailId": {
+                    "email": {
                       "type": "string"
                     },
                     "password": {
                       "type": "string"
                     }
                   },
-                  "required": ["emailId", "password"]
+                  "required": ["email", "password"]
                 }
               }
             }
@@ -888,10 +885,10 @@
           "vendorName": {
             "type": "string"
           },
-          "emailId": {
+          "vendor": {
             "type": "string"
           },
-          "logo": {
+          "card": {
             "type": "string"
           },
           "content": {
@@ -906,8 +903,8 @@
         },
         "required": [
           "vendorName",
-          "emailId",
-          "logo",
+          "vendor",
+          "card",
           "lat",
           "lng"
         ]
@@ -915,16 +912,10 @@
       "User": {
         "type": "object",
         "properties": {
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
           "userName": {
             "type": "string"
           },
-          "emailId": {
+          "email": {
             "type": "string"
           },
           "password": {
@@ -932,10 +923,8 @@
           }
         },
         "required": [
-          "firstName",
-          "lastName",
           "userName",
-          "emailId",
+          "email",
           "password"
         ]
       },
@@ -945,13 +934,7 @@
           "cafe": {
             "type": "string"
           },
-          "logo": {
-            "type": "string"
-          },
-          "address": {
-            "type": "string"
-          },
-          "emailId": {
+          "email": {
             "type": "string"
           },
           "password": {
@@ -968,9 +951,7 @@
         },
         "required": [
           "cafe",
-          "logo",
-          "address",
-          "emailId",
+          "email",
           "password"
         ]
       }

@@ -1,0 +1,20 @@
+meta {
+  name: update user
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/users/(replacewithuserID)
+  body: json
+  auth: none
+}
+
+body:json {
+      {
+        "_id": "65ced20bdaba65aca52ac5d3",
+        "username": "Boris Brejcha",
+        "email": "brejcha@mail.com",
+        "password": "password"
+      }
+}

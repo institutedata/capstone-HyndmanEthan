@@ -1,0 +1,23 @@
+meta {
+  name: Update card
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/cardss/:id
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "title": "Chur Bae",
+  "logo": "",
+  "address": "",
+  "description": "",
+  "link": "",
+  "vendor": "ObjectId"
+  }
+  
+}

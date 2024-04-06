@@ -1,0 +1,23 @@
+meta {
+  name: Create card
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/cards/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "title": "Chur Bae",
+  "logo": "",
+  "address": "",
+  "description": "",
+  "link": "",
+  "vendor": "ObjectId"
+  }
+  
+}

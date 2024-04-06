@@ -5,6 +5,7 @@ const stampSchema = new Schema(
     card: { type: Schema.Types.ObjectId, ref: 'Card' },
     user: { type: Schema.Types.ObjectId, ref: 'User' },
     vendor: { type: Schema.Types.ObjectId, ref: 'Vendor' },
+    subscribed: { type: Boolean, required: true },
     stamps: { type: Number, required: true },
   },
   {

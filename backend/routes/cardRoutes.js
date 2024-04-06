@@ -3,19 +3,20 @@ let router = express.Router();
 let Controllers = require("../controllers"); //index.js
 
 router.get("/", (req, res) => {
-  Controllers.pinController.getPins(res);
+  Controllers.cardController.getCards(res);
 });
 
 router.post("/create", (req, res) => {
-  Controllers.pinController.createPin(req.body, res);
+  Controllers.cardController.createCard(req.body, res);
 });
 
 router.put("/:id", (req, res) => {
-  Controllers.pinController.updatePin(req, res);
+  Controllers.cardController.updateCard(req, res);
 });
 
 router.delete("/:id", (req, res) => {
-  Controllers.pinController.deletePin(req, res);
+  Controllers.cardController.deleteCard(req, res);
 });
 
 module.exports = router;
+

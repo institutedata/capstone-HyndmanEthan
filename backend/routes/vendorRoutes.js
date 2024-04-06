@@ -13,6 +13,9 @@ router.post("/create", (req, res) => {
 router.put("/:id", (req, res) => {
   Controllers.vendorController.updateVendor(req, res);
 });
+router.get("/:id", (req, res) => {
+  Controllers.vendorController.getVendorById(req, res);
+});
 
 router.delete("/:id", (req, res) => {
   Controllers.vendorController.deleteVendor(req, res);

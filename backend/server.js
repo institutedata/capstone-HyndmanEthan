@@ -32,13 +32,21 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to Percs application.' })
 });
 
+let cardRoutes = require('./routes/cardRoutes')
+let pinRoutes = require('./routes/pinRoutes')
+// Not in use
+// let stampRoutes = require('./routes/stampRoutes')
+let tokenRoutes = require('./routes/tokenRoutes')
 let userRoutes = require('./routes/userRoutes')
 let vendorRoutes = require('./routes/vendorRoutes')
-let pinRoutes = require('./routes/pinRoutes')
 
+app.use('/cards', cardRoutes);
+app.use('/pins', pinRoutes);
+// Not in use
+// app.use('/stamps', stampRoutes);
+app.use('/tokens', tokenRoutes);
 app.use('/users', userRoutes);
 app.use('/vendors', vendorRoutes);
-app.use('/pins', pinRoutes);
 
 
 // set port, listen for requests

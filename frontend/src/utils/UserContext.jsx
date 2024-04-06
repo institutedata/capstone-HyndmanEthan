@@ -1,24 +1,14 @@
-// UserContext.js
-import  { createContext, useContext, useState } from 'react';
+import { createContext, useState} from 'react';
 
-const UserContext = createContext();
-
-export const useUserContext = () => useContext(UserContext);
+const UserContext = createContext(null);
 
 export const UserProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState({ username: '' });
-
-  const loginUser = (username) => {
-    setCurrentUser({ username });
-  };
-
-  const logoutUser = () => {
-    setCurrentUser({ username: '' });
-  };
-
+  const [user, setUser] = useState(null);
+  
   return (
-    <UserContext.Provider value={{ currentUser, loginUser, logoutUser }}>
+    <UserContext.Provider value={{ user, setUser }}>
       {children}
     </UserContext.Provider>
   );
 };
+export default UserContext

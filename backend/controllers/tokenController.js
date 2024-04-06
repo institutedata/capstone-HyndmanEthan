@@ -3,9 +3,9 @@ let Models = require("../models"); //matches index.js
 // TODO: add getbyid
 
 
-const getPins = (res) => {
-  //finds all Pins
-  Models.Pin.find({})
+const getTokens = (res) => {
+  //finds all Tokens
+  Models.Token.find({})
     .then((data) => res.send({ result: 200, data: data }))
     .catch((err) => {
       console.log(err);
@@ -15,10 +15,10 @@ const getPins = (res) => {
 
 
 
-const createPin = (data, res) => {
+const createToken = (data, res) => {
     //creates a new Vendor using JSON data POSTed in request body
     console.log(data);
-    new Models.Pin(data)
+    new Models.Token(data)
       .save()
       .then((data) => res.send({ result: 200, data: data }))
       .catch((err) => {
@@ -29,10 +29,10 @@ const createPin = (data, res) => {
 
 
 
-const updatePin = (req, res) => {
-  //updates the Pin matching the ID from the param   using JSON data POSTed in request body
+const updateToken = (req, res) => {
+  //updates the Token matching the ID from the param   using JSON data POSTed in request body
   console.log(req.body);
-  Models.Pin.findByIdAndUpdate(req.params.id, req.body, {
+  Models.Token.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   })
     .then((data) => res.send({ result: 200, data: data }))
@@ -42,13 +42,13 @@ const updatePin = (req, res) => {
     });
 };
 
-const deletePin = (req, res) => {
-  //deletes the Pin matching the ID from the param
-  Models.Pin.findByIdAndDelete(req.params.id)
+const deleteToken = (req, res) => {
+  //deletes the Token matching the ID from the param
+  Models.Token.findByIdAndDelete(req.params.id)
   .then((data) => {
     if (!data) {
-      // If vendor with the given ID doesn't exist
-      return res.status(404).send({ result: 404, error: "Pin not found" });
+      // If Token with the given ID doesn't exist
+      return res.status(404).send({ result: 404, error: "Token not found" });
     }
     res.send({ result: 200, data: data });
   })
@@ -59,8 +59,8 @@ const deletePin = (req, res) => {
 };
 
 module.exports = {
-  getPins,
-  createPin,
-  updatePin,
-  deletePin,
+  getTokens,
+  createToken,
+  updateToken,
+  deleteToken,
 };

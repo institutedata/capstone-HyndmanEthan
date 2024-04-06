@@ -1,6 +1,7 @@
 let express = require("express");
 let router = express.Router();
 let Controllers = require("../controllers"); //index.js
+const authUser = require("../middleware/authUser").authUser;
 
 
 router.get("/", (req, res) => {
